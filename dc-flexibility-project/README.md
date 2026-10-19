@@ -4,7 +4,7 @@
 
 2026-10-19 已补充八份本地数据中心研究材料，并建立数据、分析、结果与会议记录目录。见[研究材料索引](sources/local-documents/README.md)及[导入清单](sources/local-documents/import-manifest.json)。方向一的方案简版与配套计算说明均在 2026-10-18 更新；具体研究定义应结合这两份材料阅读。原有启动清单及两项论文任务保留其原有用途。
 
-前期数据包括 NC 全年供需输入、Azure 请求算例、NCC 多年气候计算资料、2023–2025 年需求模拟及周核验样例，已归档到百度网盘 `/科研数据/数据中心研究/20261019`。初始 71 份文件约 22.4 GB，另有研究原文及归档清单。56 份普通数据已删除本地副本，9 份 OneDrive 数据的缓存释放尚未核实，3 份来源说明保留。使用前按[归档清单](data/metadata/baidu-netdisk-archive-20261019.json)下载到相应 `data/raw/` 路径。年份、小时分辨率与复用条件见[既有计算说明](data/metadata/existing-computations.md)；[数据清单](data/metadata/existing-data-inventory.json)为迁移前核查快照，其中本地可访问字段记录核查时状态。本机历史来源映射保存在已忽略的 `data/raw/local-sources.json`。
+前期数据包括 NC 全年供需输入、Azure 请求算例、NCC 多年气候计算资料、2023–2025 年需求模拟及周核验样例，已归档到百度网盘 `/科研数据/数据中心研究/20261019`。初始 71 份文件约 22.4 GB，另有研究原文及归档清单。56 份普通数据已删除本地副本，9 份 OneDrive 数据已核实为仅联机文件，本地缓存报告值均为零，3 份来源说明保留。使用前按[归档清单](data/metadata/baidu-netdisk-archive-20261019-final-20261019T131312Z.json)下载到相应 `data/raw/` 路径。年份、小时分辨率与复用条件见[既有计算说明](data/metadata/existing-computations.md)；[数据清单](data/metadata/existing-data-inventory.json)为迁移前核查快照，其中本地可访问字段记录核查时状态。本机历史来源映射保存在已忽略的 `data/raw/local-sources.json`。
 
 ## 研究目标
 

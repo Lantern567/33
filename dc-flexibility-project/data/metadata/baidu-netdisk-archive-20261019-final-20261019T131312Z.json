@@ -1,0 +1,721 @@
+{
+  "schema_version": 1,
+  "status": "archive_verified_local_cleanup_completed",
+  "created_utc": "2026-10-19T13:19:02.4477241+00:00",
+  "timezone": "Asia/Shanghai",
+  "cloud_provider": "Baidu Netdisk",
+  "cloud_root": "/科研数据/数据中心研究/20261019",
+  "path_base": "Paths are relative to the initial cloud archive root; data paths also correspond to the project directory after restoration.",
+  "initial_archive_snapshot": {
+    "file_count": 71,
+    "bytes": 22372413881,
+    "original_data_and_support_file_count": 68,
+    "original_data_and_support_bytes": 22372391691,
+    "metadata_and_readme_file_count": 3,
+    "metadata_and_readme_bytes": 22190,
+    "this_manifest_included": false,
+    "note": "初始 71 份文件的计数与字节数保留上传时快照，不包含待完成归档清单、本最终清单及另行上传的十份研究文档和索引。初始归档中的两份元数据和 README 保留上传时内容；当前清理状态由本最终清单记录。"
+  },
+  "verification": {
+    "upload_completed_utc": "2026-10-19T10:14:26.838415+00:00",
+    "remote_verified_utc": "2026-10-19T10:16:01Z",
+    "verified_file_count": 71,
+    "scope": "上传工具记录本地 SHA-256 及分片信息，由服务端分片 MD5 校验上传；完成后核对全部远端文件的最终路径、大小、文件标识和云端列出的混淆 MD5。",
+    "source_sha256_basis": "上传时真实源文件 SHA-256；普通数据删除前及 OneDrive 缓存释放前已由清理审计再次核对。",
+    "cloud_listing_md5_note": "服务端列表返回的混淆 MD5 按原值保存，不能直接视为普通本地 MD5。",
+    "full_file_download_sha256_verified": false,
+    "limitation": "未下载全部归档文件重新计算 SHA-256。"
+  },
+  "local_cleanup": {
+    "ordinary_files_deleted": 56,
+    "ordinary_files_deleted_logical_bytes": 21938401972,
+    "ordinary_files_note": "普通文件仅记录删除的逻辑字节，未将其等同于实际释放的磁盘空间。",
+    "ordinary_files_completed_utc": "2026-10-19T10:20:27.0879479Z",
+    "onedrive_online_only_files": 9,
+    "verified_online_only_files": 9,
+    "onedrive_cache_release_pending_files": 0,
+    "onedrive_logical_bytes": 433983246,
+    "onedrive_reported_storage_bytes_before": 392155456,
+    "onedrive_reported_storage_bytes_released": 392155456,
+    "onedrive_reported_storage_bytes_remaining": 0,
+    "onedrive_storage_measurement": {
+      "method": "GetCompressedFileSizeW",
+      "before_interpretation": "本轮操作前已有 1 份文件核实为仅联机，API 报告值为零；其余驻留文件未设置 Sparse 或 Compressed 属性，API 返回逻辑大小。本轮报告值与九份文件的逻辑字节总数分别记录。",
+      "release_verification": "释放后 API 报告值为零，同时满足 Unpinned、未设置 Pinned，且具有 Offline 或 RecallOnDataAccess 属性，据此验证缓存释放。",
+      "released_bytes_interpretation": "报告的释放字节仅为本轮恢复操作逐文件 API 前后读数之差，不包含操作前已仅联机文件此前释放的部分，也不等同于九份文件的逻辑大小或精确物理空间释放。",
+      "precise_physical_cluster_release_measured": false,
+      "limitation": "未测量精确 NTFS 已分配物理簇字节及其释放量。"
+    },
+    "onedrive_completed_utc": "2026-10-19T13:13:12.7818031Z",
+    "onedrive_release_failed_utc": "2026-10-19T10:23:59.1992261Z",
+    "pending_metadata_checked_utc": null,
+    "shell_space_release_request_recorded": true,
+    "shell_space_release_request_note": "已记录“释放空间”菜单请求；请求提交不等于缓存释放成功。",
+    "retained_source_support_files": 3,
+    "retained_source_support_bytes": 6473,
+    "retained_metadata_and_readme_files": 3,
+    "onedrive_already_online_only_before_this_attempt": 1
+  },
+  "evidence_sha256": {
+    "upload-plan.json": "5869b90f6619a45bdb9c05361080046828913c5bbcf5e29b6758d24a4b4dd4ea",
+    "batch-state.json": "132ffcd84af01531583b6f0f3177fa00082dc140ad295904e3cd3bb48c259004",
+    "remote-verification.json": "aa55ebbc182dc3b022c3453344800a94b7c1a6d836e14eb869314dbb0899c756",
+    "deletion-results.json": "a605d004ee9c4b86032ca88683b2eed0fda51ae927558e2488857ef1f082452e",
+    "onedrive-release-results.json": "0586b6594de40f808cdbfb7a3707392f00a64c9ce961d78b225c3328c7c59601",
+    "onedrive-release-plan.json": "40ff3616434aca7f068aa376ea22de7306c747d338e1c67e9b4160f84908421a",
+    "deletion-plan.json": "2f1d292efd0695d06132a16a60e55aceec9e259cdd824c54a973baf00748dcad",
+    "onedrive-shell-first-request.json": "8d548b4e185aac7ae9cfc58734f6da121339cf69da8d6b3ebae01d57a036fcd9",
+    "onedrive-recovery-plan.json": "47ca858f3ac75d12894c2a34abbf1d8db4d4e55a6e5b1126e42126c18943107e",
+    "onedrive-recovery-results.json": "59272f834874eb53521e1665443e1b18365f63333ff6c765a87293acfe83b443",
+    "onedrive-independent-metadata-check.json": "841aab3756847e43f11366c278ec01ab84929aa6377e5e1d854d9237480a5af3",
+    "receipts/8f5badc161e6b74e0452c52fea7f9c11ba72ce69d7e6cd79ed69369e40f07753.json": "778c7e2f9df455cf1788ac9abb36d8a5a73679e3a0dc476f2a1facd798196474",
+    "receipts/6dadd842f7d2f5bc4e2c26df4a0edc8e4945df5ea1dd7a6957bee2260922cf85.json": "b7eee5539d127707daee6c6f4fe29d05521b849a8f567d9e1b642b86b5259a51",
+    "receipts/6ef2f453f97450047042f43d7ba22c44198468ddff67da2d86038b191330f799.json": "6d18a793d706b5562b238bb51a5d44bf7f0e047d64d5033fadbd2753933c8947",
+    "receipts/69d77236f36717824db6baf6901d2e32f25f9d85e045452357032fc34bb7e4b1.json": "7131d669e3d7d04b4f340858bae04fad1037cfcc074bfd959d052c4559d8a95b",
+    "receipts/9cad1e620616c939809088d80411caa6ba7ac64245057cf9f24290c44112741d.json": "f42added71cadf9624ea67fa1ab96c67ea039bfe2cf29f9933e20cab142b7c84",
+    "receipts/e4deaf99162bb6401dcaabd3519b9aa844d019d0daee31bbd3bb79ca7ef1dfd2.json": "c3612a3857e8969c8c3b606512bb38cc6b79a760a76dd17f6914b601b370ce41",
+    "receipts/95a35acdd623cf60796987f86a663c7945123a5f3dbe86852c96d8100456df69.json": "1874837a02fc78b6ba18528ad0ebe2ebf228705e14d34360880d46b4cfb49af9",
+    "receipts/017a245f145bac1feb807a384a54741f3b08aa7b8a401fd348d93250c95e8972.json": "3fed5051aba46b72da307f1abb86c90a3b12c41b1034266da5de8449112211d0",
+    "receipts/986b69f87d5a2d2c9d8589e5f5a6216840a65ffe559f77b0631aa3c913b2a11e.json": "3d49fc5e75bd0b90630a644d54e71264c081f352d20f9e5abea32fbb87b8b257",
+    "receipts/6b6d147af0f2320874cca1f7063e26ca80bb8b34e4535819e69ea669e14830f2.json": "5e33b81e0ed2be00284278b15f366d351b5c0bc424a3ff8c25a2abc92cec0ae0",
+    "receipts/3c034bf605278c7e4cb5d331f8c7460a9ff8900bb74e5789ee3bd4327bc89e34.json": "9fb6a29ea07604fc2e5baad03c246b5de450dfb2f227c0717bc24b0502137434",
+    "receipts/95c7683c6657df7074b1236e89692f83c4252c1ae79661c1f4aebbae335f2302.json": "9285c70018a0d124b71acd12c54bb3adad125e3a2ac0b3cf782ae1353334ee22",
+    "receipts/79f4ffd5a91a9d489e58e6c47943f63655e9cc5b451445f0eb6dd6097608f0f7.json": "877b3fe97107bd0c4a4376e2bf9bc0da15d4e04b7737221ca26261e88438022a",
+    "receipts/385ef04c7711094d1e8b4fff3c786ade2b591501b12ee601882edaef20a7aa38.json": "c0397e6f7afdd6333b29cba64630cf09ae1c7b6942357db26701e6dd5226ec8c",
+    "receipts/223032abc17c963b3366fbd737b5e77c5cdaf379bd1b0af522cdb824af3e4d2e.json": "a84298e5044c7fb8678b94e80e2e2fabc5e2f7b29a9e861356b3ecf8524890a7",
+    "receipts/a317fd4e5c6ec63f70276342a792f5f80f3b5ccb8eec0381224aeefc2aa3c181.json": "b41a53d3b58a78a26821f999bc8e0e2c9467e77c3a2bdba85eef7368e3e9b963",
+    "receipts/1a35313decf24fbf1f34d7886566173f0c9258a38a756cfe32955450161f8557.json": "45688bc1ce0b796886b98ba2edcd343f95a40316f481daa9cd3e01d1fa4a1472",
+    "receipts/68f63adbbee2e4e689026037881e90736393ed03ad0aea6a844b250ed3d4e6da.json": "95f2fbba69495c1fb8a2c75d6c1d722b40922287ed370cc3c258823eac955c94",
+    "receipts/bdb0ce3409d5a6c15c7399ad2fe8a86d62bbab7afa0e6b880f2232ab058bb90a.json": "af3329153c41838e7c59e2ab797df32e62ef9b7f34c21cb86b440ad2bdd9a32d",
+    "receipts/32faf5cec4cdc86ec1a344cd9c3de106d5937367c64b108d61432296738b0790.json": "7372d7449ba97e366579020315c29771bf8c426f2853fb4defaab41b8db1ce14",
+    "receipts/b2f451cd14b5a55a01346df1904667413adadfe8e8cb028f2b57b18c112c9a62.json": "9f3c75e81641aae5d18e10ab44c61670c4bb46e41d954bf89ff35826a8616da9",
+    "receipts/f516c9d83a52a2d131bb61a6209b47d033f0c1a5af48169993aa00b6beb906e2.json": "94813beb149530a06625ed5a24c74f2a5fd15e0b109b89bbcb0a25bdaa369c1f",
+    "receipts/8314f7e83da014a7454f3556ec8e8b539f314a953f3e309b337a84f3501201e7.json": "f7b7d0894ba7ac4a60cdd730498de2572a07335b6802777f231b79ae24d4acaa",
+    "receipts/f050221ac50a31924943331d21170703872dea53a7925e08ea5f1b671b4ce01a.json": "3975587fc5da2ed0d51c7bbe2c0fb9abc50e348729b0ac727067c638c9bb4913",
+    "receipts/74c20633efb3ea5960388307cfb6555d8bc25425c16e740b7c258036b2afed29.json": "8cb417ee536cfcc1b07c30192e2e3b7117a01b299dfa822af05651baecafd084",
+    "receipts/9ddc610182bdee89ce662e617ef617c5cda839c21a8ac5e13e29417b821cfe26.json": "c6df554fa81071fb6a8eaddd7d391f05a4abca78051563204084568a51e9c36e",
+    "receipts/49cb31f13a98906be5bb063bec7c54a371d93352e9edd8c7c765529802baf758.json": "f568dd25dce3998ea1ccf2daebf32183bdcd6f3473515203d8c11abfba58bce4",
+    "receipts/c231bcdc58fbcde8208ac924def8732016604a2b0910e6ea892d61356f8274d9.json": "e053f406b35001dcaac0e5f95a7cde6e2b94f437225cc8b793b8877fffcbe24f",
+    "receipts/c940fe65f6a33bad1f6f046059889296da84b36751e95878707280f0c77f7841.json": "7a27040cca35812428ea30c737df780c7bdb1cf1e2ce4859bd7d006768268baa",
+    "receipts/be0dc7fc80e13c63a501d8d79e347412e7d1332c6ec03db265cd6139a864a8b2.json": "a82e0780a980fa0458bf0ae6cf7482b1ebd70e214ba201f4a9ad969761e8c69b",
+    "receipts/9280256122502a1dcb0157a8e312ad8ca03e506036dbd5517d3bfe2ee2f5fb90.json": "a99409196273eff504010e72fefdaba67ad128a76481ddfe770b5009bb440347",
+    "receipts/40796af26ac1b71d25ec72339248ae450d7ec8794681b3a9821d0652f692737b.json": "771710ae90d42e65d3d827ff03018509a9ae1eafaceb29a1ef25520bc706002b",
+    "receipts/423ca60be6e4923b9760ff194e115dbc4780a2b24e24089c6103ffccf6a4a84a.json": "769bd87c9d23eff9f57b33878a45300ea98b4a88f834607588d001268f36cac2",
+    "receipts/3b271a8adbb94d8598d3f29fb04d4ba20b897be76616d8011150d197c17d52a4.json": "43fada2b154041a0d9f1014bf3b83295d73cfc6dd0844e6cd401ddcbfabd3ab9",
+    "receipts/304b833ff2edebe66cf4e5c568372b8be71281d52aaa9dcc564835f270d1f92f.json": "294d3de423cab64a6e293967e45796e5b78f81516acf8e7f130e2ca18dea5903",
+    "receipts/bb998c6c20a65027c0e9d0ba3654635e4b860c3fe0f986d9fcf1b09e2cc8d7fb.json": "ad4e636fcdaa8457a211bf4fa4c2da55475b4b2b9d6f28be101eda1cef5a5045",
+    "receipts/60bb4103a771fd59093f4acbb4f4697afdd593091a7c07dca406be78069967d3.json": "d64f09319783a1d3a3c14e7ac0733b51a847a0da75a469cca42356bec7638073",
+    "receipts/093364075377540f32c5278fc164a108de29dc9c348ed509fb09b9c03947f529.json": "25e5f310c5f17f9a6dae1de14bccb46da76eeaa51f6e6bb76b085605960ba09d",
+    "receipts/c0572672a32cf362c87c263c8028139e8cc1d9de6feb60e2a7f2c1bb2189b7b7.json": "aa2c618be2fe3003a0370376ba1cc645d0e10501a4a3be9f37d4f263ac3fb2be",
+    "receipts/f2e0d79989a669d2be827524c6cd067a30b59cc4d1f3e4d15039b70fdb94a6dc.json": "8477385e110c0f62f30d22b1edfd52b67bcaef4827e7465060958e123a58e817",
+    "receipts/2ff53ed8ff11e5971e7308c397537999456dc45740233a75b6da37d48a33ef24.json": "b7d3d4fe78bcd98a45802c641089c6bb17870218911f95a083dc1023ce72eb47",
+    "receipts/00c00f3803f54abf464c79a65392b1c86a97470744c3374caf16daabeb1d3923.json": "e56c15457ea940b3ff23dc90b1ef40ede3a377981af06d74a2468a5eff6cce0a",
+    "receipts/ef094119d320ae30c1846a61bad02c833fe65910fb66974c8b4b6d11dd508ebc.json": "b1e015a798f2025fb04ce72f7c60d7473679e10c61b0fa27dcee0d968aeda271",
+    "receipts/1672166b23e8c8c491c3a7c89588a2a61f0265c2114821cc043541273b16c01d.json": "2b03b3fb43857f176073c6f26af2c36976904ac617284426d128695721638de2",
+    "receipts/233e0f5c1e1c5a5aeb04efcd2abfbb556eac619e32fe103cc3de78ee9aa81ce3.json": "2d5cc75a3fff93d35c06d98f0056448ae640b0ff3494a1be4c68276321705e2b",
+    "receipts/6d182e49f0260e75b9c0cf3792e114a027df6be64ce8da6fcad81cd99014067e.json": "3caf4a8d649a8eb1ef458f329ca3e2afc8dca7e1fb578f1886592744bd0ee993",
+    "receipts/a645cd0fff2820db70759256a32fc84a267bce8e32e2b526740d2c35d135ae2a.json": "454b3b1c554cab1a4a1a2080e1a35b2caf2e25ac2400be2e781ca3cfc1e7918d",
+    "receipts/6152b497f2f10deb20896a9bb1e0ff734fa45394099cfa1bb11b5a0071279f27.json": "47176e8f027b7421f5bbfc994da0fdfaf319209caf6b4488c23e9f89cbe6aa89",
+    "receipts/d20f3758fa9f9ecf997ec6ffc4875054cc3b0c9632353b7ed5f3c65d095c6b7c.json": "7236b8d6bfc94d3760c3941d677aa51cedaada6e09bb58f715419762bfa9ee7d",
+    "receipts/34ccff42a9315cf846d2758b333b1d7ca0386fd1cd33aecc62c8052a5bc36fb0.json": "6522e9931f5b756d71eeb52d88af0e7713e047d92a4d35188ef626e87b147e41",
+    "receipts/e84e6763ef70a5af1fc049282d5f4604176fe5f8aa6f758b8a2077050dcd3e32.json": "621d694331770989de0979320aacde0aa4dd2661b129dfe0200f3b5377fc9373",
+    "receipts/2f033db80bc098e05b4741486443c452c07b215efe13198fe86255c23b5a86d4.json": "f122d72b4c170c3fcc1fecaa0edcaadae34acbef0bf0d82aa80f2918f065ef0a",
+    "receipts/bb595b7a7325d3c97867cc89bd2e9eed44541abadf18791f897c4e8bf38afe21.json": "8cf098d507c4a061ce7ca9d86867b554a3e9b1ccdb3ef640e96ed16a4ca66dd2",
+    "receipts/de12c99d503381ded317f45862b9fc4842c67f459e9678a877d51d1aef7f465a.json": "ac12d3028715e4cb940e104f2af95d24dc2bf72472d0bfe1bfd43d3decb6236b",
+    "receipts/33e12dec38bcee033ce00c02fc8b1a63eba6d8279fd3b528b12ecb1b1c1c0b2a.json": "f4d0ddc754a2274edf3afff2af127611c4d8778d4a15038b9bb9f41806df3771",
+    "receipts/eda85c3f4329ccfe3d0e7344435fa5c2f65e686d88fe7f182d30d89ea985c080.json": "d39788846684344a1f01c814db8d7da09925ae13ac86d4ed0063a2411d5b8e9e",
+    "receipts/f1433f81133a9b1ffaf5f668bab5fe8daff823a4370eea36309cb42e1b3f3343.json": "63fa01a8cc69b8a95b5cff53bb6f29d904d7c2173b9fcc1898f7a061895226c5",
+    "receipts/62c224551f5c73153392e52e500c1cbd6ffef2072779e0998936eb2d75c97ee7.json": "6bef0216d97c3a3bce5639a953bc9c56fc49692506aeb6d8ccebcb98693f5647",
+    "receipts/091c6ae3fdaf84cadf67ac449236dfcaf958b5a0e9660600eeeb86c502c1769a.json": "d1112fa6219e70176d755140b546b356d5cb13bb7017b037050a186cb6276080",
+    "receipts/c159dabe0d57e13c2d77bb52e32458ad14ab4921d95babedd80ac5867e9e7493.json": "ec02ec15eb7ac8ca00b74109a558af49172c0a76b10876746fed89831a3023e2",
+    "receipts/bcc0e40d3e2acf7e2398f247d8f9e2095055ca527224e713c915e93b5e39f0a9.json": "d37fec72f1d5f78d17e2c478be50335eac85897f451f301bd121e4e7cea3e81b",
+    "receipts/b96f268c2be11e63c5b77380ea8f0c8c97b659e18fbe9604539f8799f7b1dbd5.json": "19208e33e95dedad8b29e607c88161397047c06d7136ac4530a451bf3697b729",
+    "receipts/bcb64f42ddaf5b9f9827bb651900782bed6f2868d53f4559b23e60760c5576a7.json": "e959b2aa72a10763c258e3eb144acc86f2e8c87d4ee0b0ca5ed41777b2a3f84c",
+    "receipts/88f4a870b4365d8b89556c14619a361aa093b17f09220d4c079ff9a32ca7044c.json": "6e7f2e024d995a3ee377307b694e26b9ff715f306f231a7d5ae5f6fb5a610d05",
+    "receipts/d5f63fb5e38133ecd13d5e97c2e5a8f19f0549bcfeb758bd8a50a55b617b8fd1.json": "51634d54c9214e901356552c6a2af3b1441b683b0d4ecf594387820291e3418c",
+    "receipts/20b4f12a6288eebc923b445881fb6a669ecd7045e4b91c63941587e20805828d.json": "49e9b482908edebda810ab1af138e0c2c9ee1a55ce2e7b53a99b7ee1a1e8b5f2",
+    "receipts/bedb9f7bb5c8037e1535951c55a0f88552548c934662c5324f82f9bf6d5393fb.json": "44e90879d529c10baf401401b761c11358a9c555210612a3e36cd00810b11058",
+    "receipts/2d646ff682aff3081ea606155d15696aab65e5547a6001185e16b506d353409c.json": "21a7688666b0627396533cd5d606ad30e3f1c12aa36ecf65a5fac00850274210",
+    "receipts/790334b2c0d3f3b5a17d33e7515600484139a1e69a21c60acdd9564eaf0d1236.json": "c5c032b612646164c197a11f4924242ce507fe05399779e0c3d93a19eb49be81",
+    "receipts/139cb4f3f08733f997157e7d44788dc007831b66c0a6f134adede50958d046d4.json": "2997f404bbc8629ee1b858d4eb0f215ddda5204b58daa6d868c515631fa1f45f",
+    "receipts/f6218cd4af6b2e042c1306ad6b941397f7b3d9490d88bdc58bf63e8485b232f7.json": "198e299900f98bc5ebbbbfa383f840974bcbfcd6943143930a419e5f36794981"
+  },
+  "files": [
+    {
+      "relative_path": "data/metadata/existing-computations.md",
+      "bytes": 5373,
+      "source_sha256": "48c71643c97e788afbad191e537149f51b21c1eb1025b340011a13b41d40bd44",
+      "cloud_listing_md5": "973f1e65aoa171b77d4f398ba653d8f5",
+      "cloud_file_id": 528390620006734,
+      "local_disposition": "metadataretained"
+    },
+    {
+      "relative_path": "data/metadata/existing-data-inventory.json",
+      "bytes": 14815,
+      "source_sha256": "26b9eefbde0fbb1d92c1d53b06e81b207bdefd7426347008558131a289b98fbd",
+      "cloud_listing_md5": "20724a170gdd0fd1bec7550dab033a1c",
+      "cloud_file_id": 688350757911883,
+      "local_disposition": "metadataretained"
+    },
+    {
+      "relative_path": "data/raw/nc-hourly/burstgpt_diurnal_fit_v2.csv",
+      "bytes": 1602,
+      "source_sha256": "6e6807a12fdeae0f0f2c63ee4291b7812111f1ed9044128f3cf476f0bb6589f5",
+      "cloud_listing_md5": "448895c30h2affde8d8967bbd57b3f2b",
+      "cloud_file_id": 655624538078824,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/nc-hourly/country_capacity.csv",
+      "bytes": 13235,
+      "source_sha256": "dffa4ae1a2e005efa2a0271e73e1fc73d65f62499f0bf6da07d840e228a42d9c",
+      "cloud_listing_md5": "75cd84acch1e7056173982f179bb6612",
+      "cloud_file_id": 267048056417674,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/nc-hourly/country_hourly_cf.parquet",
+      "bytes": 10786898,
+      "source_sha256": "7d6446125ca60f76e8f5e29f7f5060929d974fbce1050077b4535dcd5d92ee08",
+      "cloud_listing_md5": "6e3eda0b7o4173b4913daa568525c3b8",
+      "cloud_file_id": 647909562448593,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/nc-hourly/country_hourly_demand.csv.gz",
+      "bytes": 18183221,
+      "source_sha256": "a6a352bc9df3e71cc32fbb7da4919c948c72c0a01f27598849ba3f803e60dc12",
+      "cloud_listing_md5": "b66ec1229n70c82a1e692625afb35336",
+      "cloud_file_id": 95160213316798,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/nc-hourly/country_meta.csv",
+      "bytes": 4096,
+      "source_sha256": "cb26abfe74728b4133211482c03ca7f6957cf26fc74d72016a3e7bb3bacdd1cd",
+      "cloud_listing_md5": "2eb2a7904q0a91ba8cc4a4814f793751",
+      "cloud_file_id": 159568782727327,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/nc-hourly/normalization_windows.csv",
+      "bytes": 167512,
+      "source_sha256": "e14b441860ae7d5a6ed00a2e72cb795b4978414efca2d1f0abfc1996e63df331",
+      "cloud_listing_md5": "22ae641d9pf6b00e579ebab3b92d8494",
+      "cloud_file_id": 54839813115766,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/nc-hourly/nrel_atb_2024_battery_4h.csv",
+      "bytes": 816,
+      "source_sha256": "b7958d4e20864a4114b5cbace0e48b0f33706f1dbdc11a0b2dcce3a1b1c9a2b9",
+      "cloud_listing_md5": "debab0923k04870ad1b34c8455a5707b",
+      "cloud_file_id": 606133103854940,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/nc-hourly/site_hourly_cf.parquet",
+      "bytes": 14585527,
+      "source_sha256": "911a2e9bd7e88752075edaf8d825152cb02e0ac877df1504627bcbd6ad49af80",
+      "cloud_listing_md5": "c60c70b78i1dde9255728c2b21d58fdc",
+      "cloud_file_id": 1042545300003283,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/nc-power/azure_coding_hourly_with_scenario_origins.csv",
+      "bytes": 26430,
+      "source_sha256": "3c28736183854100252659fb51d77da128f53bfbdef2e2c66fe045d9cd476ade",
+      "cloud_listing_md5": "e1f92951bl3dcc8609c6e62977e32a60",
+      "cloud_file_id": 341845517427434,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/nc-power/input_provenance.json",
+      "bytes": 2632,
+      "source_sha256": "5fcc6457f40fd4bf14221951cf1385c0f5906186def0e1c1c0912520cfb2342c",
+      "cloud_listing_md5": "306f745c6ie3bc87ca86dd380cd70c38",
+      "cloud_file_id": 326122079515785,
+      "local_disposition": "supportretained"
+    },
+    {
+      "relative_path": "data/raw/nc-power/renewable_three_site_hourly.csv",
+      "bytes": 51839,
+      "source_sha256": "ce01f830bdddedc0d5623f5e04670d71bb2e5fca035e3cd9dea06d03c4803ed5",
+      "cloud_listing_md5": "e07f61016vce98de0cdce05015207858",
+      "cloud_file_id": 23279684305778,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-demand-2023-2025/country_annual_draws_2023.parquet",
+      "bytes": 21538968,
+      "source_sha256": "37bc450115c992bd41ac7ec0546aa3ca60cabf2194e310b623e91da17e9a8296",
+      "cloud_listing_md5": "363b674cfk1a0283970c31ddf05bc3d8",
+      "cloud_file_id": 842618488395645,
+      "local_disposition": "onedrive_cache_released"
+    },
+    {
+      "relative_path": "data/raw/ncc-demand-2023-2025/country_demand_hierarchical_2023.csv",
+      "bytes": 231466,
+      "source_sha256": "ad315fb5d79d585b9eae60115298c32056c6ad7641be0ceab083cd258146b5f5",
+      "cloud_listing_md5": "6e1c83d24u40abe7ea791318f4d9eb68",
+      "cloud_file_id": 980180895557627,
+      "local_disposition": "onedrive_cache_released"
+    },
+    {
+      "relative_path": "data/raw/ncc-demand-2023-2025/facility_demand_hierarchical_2023.csv",
+      "bytes": 61794515,
+      "source_sha256": "07176828cba0aec1ba33ab693033455a58949a4d94dc90887a7efff1d16407cc",
+      "cloud_listing_md5": "fa48aea03i18eb9bae8c69fbeac0c4bc",
+      "cloud_file_id": 1009809814352545,
+      "local_disposition": "onedrive_cache_released"
+    },
+    {
+      "relative_path": "data/raw/ncc-demand-2023-2025/global_hourly_demand_summary_2023_2025.csv",
+      "bytes": 38050914,
+      "source_sha256": "17a4d92d854999f31a6f051af951cee35a0318a47d3129231efc1bf61619edaa",
+      "cloud_listing_md5": "6d100f468lc473c85f4f0a0ee265dbf9",
+      "cloud_file_id": 489983571550530,
+      "local_disposition": "onedrive_cache_released"
+    },
+    {
+      "relative_path": "data/raw/ncc-demand-2023-2025/global_hourly_draws_central_2023_2025.parquet",
+      "bytes": 188074417,
+      "source_sha256": "5076f86bae7f8ff4837e07271f51e3396c99224cec50bc9110754493a10f5af6",
+      "cloud_listing_md5": "b72859526n4338bc96b3867517fbf1a7",
+      "cloud_file_id": 161144611918402,
+      "local_disposition": "onedrive_cache_released"
+    },
+    {
+      "relative_path": "data/raw/ncc-demand-2023-2025/global_hourly_profile_metrics_2023_2025.csv",
+      "bytes": 9637,
+      "source_sha256": "ce6ec9c6c4464550b224b04fcbe846643141d2cfc7b18de1210873714d100fc3",
+      "cloud_listing_md5": "dc4c093cfjba870b056a6e72c4ef3053",
+      "cloud_file_id": 385092496913381,
+      "local_disposition": "onedrive_cache_released"
+    },
+    {
+      "relative_path": "data/raw/ncc-demand-2023-2025/type_hourly_paths_2023.parquet",
+      "bytes": 41827790,
+      "source_sha256": "c3e2f5ad8bcaeabc7544bfd807dbf0dd0d3bc244b0a2466bb00af49ee7985cc9",
+      "cloud_listing_md5": "7a027d80cqe02c031238a72fb5cb5d80",
+      "cloud_file_id": 325454394849819,
+      "local_disposition": "onedrive_cache_released"
+    },
+    {
+      "relative_path": "data/raw/ncc-demand-2023-2025/type_hourly_paths_2024.parquet",
+      "bytes": 41251853,
+      "source_sha256": "6eadd4ea819c3e3494147c1d945fbd89228c88e77809a3491f1abcd0a23d4f76",
+      "cloud_listing_md5": "c7f86f9c3r4953daf1cf8751ddb15e70",
+      "cloud_file_id": 428959352098779,
+      "local_disposition": "onedrive_cache_released"
+    },
+    {
+      "relative_path": "data/raw/ncc-demand-2023-2025/type_hourly_paths_2025.parquet",
+      "bytes": 41203686,
+      "source_sha256": "f03cbd3a522a6624e8cb0e9420ccb405420ee4a51dfa9878818e4e74112608f6",
+      "cloud_listing_md5": "c7bea7f50l2b81034e1101aae86e60bb",
+      "cloud_file_id": 343620603000649,
+      "local_disposition": "onedrive_cache_released"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/demand_kernel.pkl",
+      "bytes": 798851701,
+      "source_sha256": "c2a7e661f6b92233afcb6e489d499606841921089893e3dee0a8833991ff3754",
+      "cloud_listing_md5": "8742f9a9arc8a6790c1b4567915724c9",
+      "cloud_file_id": 32182619910917,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/historical_weather.zip",
+      "bytes": 3799181362,
+      "source_sha256": "ac778cd0e57f3cee2031899f95c08ba3eaad3ef0df8cb839f2b292b3de21d73c",
+      "cloud_listing_md5": "c895da543h591a4ff5746ccc6f8337fa",
+      "cloud_file_id": 181552914593219,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/mixes.parquet",
+      "bytes": 225235,
+      "source_sha256": "d633e2dcdfd37d691402174d7831140b1e6fdb369575ad138b795574f3b2b949",
+      "cloud_listing_md5": "9f48f6d20ic6ef1e8f4f0663fee420d6",
+      "cloud_file_id": 464932021424374,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_1995.npz",
+      "bytes": 709634855,
+      "source_sha256": "86bdfeb7ed849dcbd7d1ba2bf6cdb6332bb65ae31fe688f5e0dc53add711728c",
+      "cloud_listing_md5": "5a383e843gea947ddca54349c3c792a6",
+      "cloud_file_id": 508936925844051,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_1996.npz",
+      "bytes": 710717046,
+      "source_sha256": "dc543098c2b4f200fcbba4c069a77b43ee5f385cbc7bdee364939e597cb1888e",
+      "cloud_listing_md5": "075249f43kf2a7881ab09809b24731d1",
+      "cloud_file_id": 1033744931244244,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_1997.npz",
+      "bytes": 709340617,
+      "source_sha256": "80156602fa76e5ac8ba74be6ba7d4eb7fecef3fc8e241d0a859a83e9f9290242",
+      "cloud_listing_md5": "415582bd7t0e26a8600cdc3e09cb2714",
+      "cloud_file_id": 906028418589789,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_1998.npz",
+      "bytes": 709477391,
+      "source_sha256": "01bc30d3b7430689f02d52743401f2d32ba4db470c8ab9d001c2fba33639913f",
+      "cloud_listing_md5": "77c8f5f23obd1b4c6b4a17bf0d950ab4",
+      "cloud_file_id": 77433398970881,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_1999.npz",
+      "bytes": 709620130,
+      "source_sha256": "fda071905adcf9908d4c8a889abfe5227924a2a5c923927b9f2ce3fb627d5f34",
+      "cloud_listing_md5": "43858532bg02635a5c9316c2b150c2ad",
+      "cloud_file_id": 966711572998422,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_2000.npz",
+      "bytes": 711099484,
+      "source_sha256": "99d0fffbd3895581d0253385d378db7fd816ac5d41eae1b49e9c313827153e23",
+      "cloud_listing_md5": "ae96eb5fak66b93b9f2bf7566ac1cb16",
+      "cloud_file_id": 635850316275064,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_2001.npz",
+      "bytes": 709548411,
+      "source_sha256": "953f54278ab7fdeff3b4f3c4ee28e9e0bc7b937c3fbccda97b6f7c2610bb14f3",
+      "cloud_listing_md5": "4c15881b5j6a75e79fbec5a369eec8ea",
+      "cloud_file_id": 505608537772345,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_2002.npz",
+      "bytes": 709075893,
+      "source_sha256": "610af4a9c9ac35d356e7e23004e07d2ff69676944e5a97c49390b10945e3d2e5",
+      "cloud_listing_md5": "d853404aev25189086f2e30c08377d3e",
+      "cloud_file_id": 412668707614459,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_2003.npz",
+      "bytes": 709540552,
+      "source_sha256": "a8a26fe6f77cd82bf407e244dbc8840ed828a45200380d5829bf8975a080f076",
+      "cloud_listing_md5": "c652b62fbh3498bcfd47547d2b0dd657",
+      "cloud_file_id": 132355801640572,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_2004.npz",
+      "bytes": 711182167,
+      "source_sha256": "c2bfeb84b1d2cef4c6d3c028cf367e4fa2ae653c6bbf4ee5d5c5f809c1d2954e",
+      "cloud_listing_md5": "db7a63edek9b38a4bc3e91ede4d94de9",
+      "cloud_file_id": 237711793092009,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_2005.npz",
+      "bytes": 709731504,
+      "source_sha256": "7c355086cabc185ed57ce58108e065c6e46585ad57fa2bb9cdec9d5059f6c87f",
+      "cloud_listing_md5": "4e6d2c970me07b26962886f5ab8adb78",
+      "cloud_file_id": 318831597619473,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_2006.npz",
+      "bytes": 709491490,
+      "source_sha256": "5290db71683b104336f7eb9567a1d9dbdb86faa68b11d0b92146411dc411aac0",
+      "cloud_listing_md5": "964fe079ei93d8b85c4200c82ce30bb4",
+      "cloud_file_id": 972868303050968,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_2007.npz",
+      "bytes": 709626911,
+      "source_sha256": "615ef853f257bb4698728417ccbb235d9d48b700d5d9290236e3b2b5d918fd88",
+      "cloud_listing_md5": "5db637ccfqd30a1d368de03974abe774",
+      "cloud_file_id": 198950714336830,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_2008.npz",
+      "bytes": 711317924,
+      "source_sha256": "28c9bda2578a09c46eb5fc4b355625038249d96c81e49485bdd0655dd68ec975",
+      "cloud_listing_md5": "f306dc022qf114240e2da056a3b7d386",
+      "cloud_file_id": 382929855928931,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_2009.npz",
+      "bytes": 709031053,
+      "source_sha256": "dce859c6f93e83545cfbf9244acaeece79d5536443e5ec0d975c40b3926aabe1",
+      "cloud_listing_md5": "2e3e667bai2ae5a273142290e922db8b",
+      "cloud_file_id": 893578405105112,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_2010.npz",
+      "bytes": 709576297,
+      "source_sha256": "1a4741ca71e25a87dd1dfb998934ff6e282a87d689a007d677584da8ee4116bd",
+      "cloud_listing_md5": "bbafc5dd5pdd04048cd98ce03f0a45b0",
+      "cloud_file_id": 93931192676728,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_2011.npz",
+      "bytes": 709357751,
+      "source_sha256": "126f5b966782c41bb5d54d1ec071796370241954c66e691cf6ac7e9546df52d7",
+      "cloud_listing_md5": "faef7ac65j81488889d0db160be6d434",
+      "cloud_file_id": 1047719093679807,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_2012.npz",
+      "bytes": 711508998,
+      "source_sha256": "ef746ced2005d7d99453ea18ea6128030037d1ce0ec704ca6cbf22020cd2280e",
+      "cloud_listing_md5": "ac6b940ddl57bd15e9a6fd494a0e62fe",
+      "cloud_file_id": 166178493489421,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_2013.npz",
+      "bytes": 709599293,
+      "source_sha256": "afc8b3dc33cdfbf70e43e9a672a57960402c7590ba983d89385e5cd6f761747b",
+      "cloud_listing_md5": "5b5b9ab3cs83f21e8a6a93f4e028cef5",
+      "cloud_file_id": 858733223764334,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/paired_2014.npz",
+      "bytes": 708964582,
+      "source_sha256": "7919f468e2803fb2a0840202ed4087b17ac598ee26d4fae2d6f1539db642b2a7",
+      "cloud_listing_md5": "7000dafa4r59400193454e813d84fe80",
+      "cloud_file_id": 712928537387264,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_1995.zip",
+      "bytes": 154311950,
+      "source_sha256": "2b03cf85ce6aee47121b0d685f39503f9b602912588b2075cee1ee09c792896b",
+      "cloud_listing_md5": "d3e397850tb592bb705dd47208aab603",
+      "cloud_file_id": 184769635662114,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_1996.zip",
+      "bytes": 156614948,
+      "source_sha256": "1e26a6e94264b389e6f274a0fdc75d518b20ac12e0da18cdab13336367d67edc",
+      "cloud_listing_md5": "dee1c5563sd60301e146f73668458a15",
+      "cloud_file_id": 814830543453434,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_1997.zip",
+      "bytes": 154451308,
+      "source_sha256": "b23fc381b833b55b5c17302c74d39869327eea188c6cb0d86136e8863b4b6a86",
+      "cloud_listing_md5": "f30ed7e03s672da958f9eaba8aef8462",
+      "cloud_file_id": 398377438705053,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_1998.zip",
+      "bytes": 154404128,
+      "source_sha256": "fe3ac716a92d68236a68042b3bff69421dbea069224a17c9f35bc23eb1c9c155",
+      "cloud_listing_md5": "749e16dc3tdda68619202523926a0607",
+      "cloud_file_id": 782041634145770,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_1999.zip",
+      "bytes": 154207535,
+      "source_sha256": "ea376709f53c010179f0420543e2ff9e6cfcbeda1669d07def05ba4d501b5f65",
+      "cloud_listing_md5": "140da9949lb200f4fd4189dd88f759c0",
+      "cloud_file_id": 635843843675629,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_2000.zip",
+      "bytes": 156523903,
+      "source_sha256": "ca17a5973bc77813f688d1c816c404f3c5de5702c9d23c98365cc5a199517df5",
+      "cloud_listing_md5": "b24016cf4g8b9c7be3f1ad4428147a1e",
+      "cloud_file_id": 253221787632730,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_2001.zip",
+      "bytes": 154507127,
+      "source_sha256": "538efde7df492e050b6691f9abcb709ccbb67957929368f12e8a926db7adcfd7",
+      "cloud_listing_md5": "163db5de7gad1e3240db8287360640f0",
+      "cloud_file_id": 264755109642709,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_2002.zip",
+      "bytes": 154515826,
+      "source_sha256": "962ae8041fef4d0cb671d264c756599ba9b976838f26ec3f0adff7257e09fecd",
+      "cloud_listing_md5": "6387c69ebtad5ec4f221d8674d08eec3",
+      "cloud_file_id": 432776518332928,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_2003.zip",
+      "bytes": 154468272,
+      "source_sha256": "beb34f2c6397f93765b7373a81bf4714f295ab71aaa50fe2f76e41ce90dc36c7",
+      "cloud_listing_md5": "52fe950dcla2bfc8e93d60b596866da9",
+      "cloud_file_id": 1125759334106589,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_2004.zip",
+      "bytes": 156629754,
+      "source_sha256": "a060ffd663de1d59974cf5b7a18afa957b96b649f45d21397276645d90940773",
+      "cloud_listing_md5": "4b317fd97iad649ecfd33bc368f3fd64",
+      "cloud_file_id": 924041066142886,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_2005.zip",
+      "bytes": 154335383,
+      "source_sha256": "7a32ca9b1598211be6ac576619ba7989e4a33e18b1f59b2dc09d37dcdcdbc711",
+      "cloud_listing_md5": "8a39bb340u2772b4adc28fd6e7c04218",
+      "cloud_file_id": 40475769795896,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_2006.zip",
+      "bytes": 154397642,
+      "source_sha256": "52420bb9ff9380b8db84f875ec459bb456d7a4bb3d8f359fb7d99f32f3ea7d98",
+      "cloud_listing_md5": "4b7c89856ia5a870d5fccca0f056842e",
+      "cloud_file_id": 312155031572833,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_2007.zip",
+      "bytes": 154423408,
+      "source_sha256": "cd9fdafe543a61b7521c64d9b4168d8a82ab97d3fa94184a105c184ff54ba8b3",
+      "cloud_listing_md5": "b1fbb0153jbf47183821d0ce0a7f244b",
+      "cloud_file_id": 72054691340830,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_2008.zip",
+      "bytes": 156471570,
+      "source_sha256": "6f3cd8b7a1f4688189786c9b268a1f460ab550a7e767b318a8b285762a9b15b2",
+      "cloud_listing_md5": "5af7f3327h2c52b05da59518b74f63de",
+      "cloud_file_id": 400400838848760,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_2009.zip",
+      "bytes": 154453834,
+      "source_sha256": "8a3aeeb0ef3d05416f9faa4d3d669cfa3c2590d10e1449275092b8044bf987e3",
+      "cloud_listing_md5": "5c2e70f9br230bd906a6f0fea15c4ce2",
+      "cloud_file_id": 417975365639966,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_2010.zip",
+      "bytes": 154400199,
+      "source_sha256": "fea2bfd7793101d3b31c715530b477c7fe3ad800c1261a8363184ef3958cfc3e",
+      "cloud_listing_md5": "c5371245br513827f492f495d204a757",
+      "cloud_file_id": 979224391758058,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_2011.zip",
+      "bytes": 154257391,
+      "source_sha256": "a52af56d034ae6898be9f46b788704922669af4cb9e32c788dd52159f53eed98",
+      "cloud_listing_md5": "a47615880med3450cd86c5feeab7052d",
+      "cloud_file_id": 62430142334495,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_2012.zip",
+      "bytes": 156590948,
+      "source_sha256": "b7cc749b902679f60e251ca422f43220678c4d4fee83b0f79f5c99878b528a62",
+      "cloud_listing_md5": "96d3e9f0bt94aba305b65713cd2bab1d",
+      "cloud_file_id": 826898057623394,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_2013.zip",
+      "bytes": 154420566,
+      "source_sha256": "bad9d25b3dd39982b84d159df6b68c7ca81e92f3d2853a82e63a0f3c5ca51d2c",
+      "cloud_listing_md5": "45e041855veb159bafa7245d3fd274e6",
+      "cloud_file_id": 318303407694719,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-production/supply_2014.zip",
+      "bytes": 154466530,
+      "source_sha256": "8389f3373b5a6538a3064b4f6c206165680f394c0c3c0048f6cd6ff7a41e5cee",
+      "cloud_listing_md5": "6acb10271qe2a8693e312a2e80bc6c5a",
+      "cloud_file_id": 847880773958276,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-weekly-check/cases.json",
+      "bytes": 1806,
+      "source_sha256": "c4e8690b4881a9385dc6a97dc78e008ed6d4480eef572d0fa5c1837dd48b617b",
+      "cloud_listing_md5": "38aa04c6an0dbcc3163284c089176fb9",
+      "cloud_file_id": 321867915643497,
+      "local_disposition": "supportretained"
+    },
+    {
+      "relative_path": "data/raw/ncc-weekly-check/CHN.csv",
+      "bytes": 9441,
+      "source_sha256": "1702db7379621c5f45a74f276955af1c4ec78fd88442ccbfd4a86ec03fbfe3c8",
+      "cloud_listing_md5": "f0557c7d8maf72e6f5c28382ad1fff9d",
+      "cloud_file_id": 1085569441775386,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-weekly-check/DEU.csv",
+      "bytes": 8871,
+      "source_sha256": "f69060d38876c1e7fd3f19548aee6f0842fb8b8f51d65ed4474361d8aee45115",
+      "cloud_listing_md5": "ee915cc11q5c6dceab2c56f43db5bd1a",
+      "cloud_file_id": 698008069658327,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "data/raw/ncc-weekly-check/README.md",
+      "bytes": 2035,
+      "source_sha256": "6271b4bbadeaa3f71cc4f4fae1d285794b53834e4b41a1dac0751cacda3ff897",
+      "cloud_listing_md5": "455b0c32fif29195a5871d43608f1fae",
+      "cloud_file_id": 1034209151750958,
+      "local_disposition": "supportretained"
+    },
+    {
+      "relative_path": "data/raw/ncc-weekly-check/USA.csv",
+      "bytes": 9615,
+      "source_sha256": "cbec01687d4d155f9c970ad886e791012bca3a25965f4dd80bc0dbd02933f99d",
+      "cloud_listing_md5": "140323544vc398fe2b982658cf05c96e",
+      "cloud_file_id": 880999743739253,
+      "local_disposition": "deleted"
+    },
+    {
+      "relative_path": "README.md",
+      "bytes": 2002,
+      "source_sha256": "61ae5fa495410562dffb629fd597f3adedad8f4ee6d8e18e54d3d03be7ce17c4",
+      "cloud_listing_md5": "3c74f0165v16b7eb43f09002660088ac",
+      "cloud_file_id": 657240198265222,
+      "local_disposition": "metadataretained"
+    }
+  ],
+  "previous_manifest": {
+    "relative_path": "data/metadata/baidu-netdisk-archive-20261019.json",
+    "repository_relative_path": "dc-flexibility-project/data/metadata/baidu-netdisk-archive-20261019.json",
+    "sha256": "ea18fdce14acd4990a20af4dd60b7cf0536269ad22b693efdfe724a571965abe",
+    "bytes": 40268,
+    "status": "archive_verified_onedrive_cache_release_pending",
+    "note": "待完成清单及其原始上传收据保持原样，作为历史状态保留。"
+  }
+}
