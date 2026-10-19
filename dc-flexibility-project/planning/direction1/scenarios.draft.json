@@ -1,0 +1,377 @@
+{
+  "config_kind": "non_executable_research_design_draft",
+  "schema_version": "0.2-draft",
+  "direction": "D1",
+  "prepared_date": "2026-10-19",
+  "execution_enabled": false,
+  "approval_status": "awaiting_scope_and_method_review",
+  "input_validation_status": "not_validated_for_model_run",
+  "source_proposal": "../../sources/local-documents/方向一_24小时无碳电力匹配_研究方案_简版_20261017.md",
+  "source_methods": "../../sources/local-documents/方向一_CFE约束与柔性收益_计算细节_20261018.md",
+  "notes": [
+    "本文件仅声明研究设计，不是可运行模型或已完成实验。",
+    "仓库内计算细节已读取并核对；NC/NCC已有元数据和归档入口，原始数据待恢复及适配核验。",
+    "小时下限和阈值扫描来自计算细节中的拟定研究情景，不是实测参数或实际控制授权。",
+    "已取得公开小样以共享来源登记为准；样例存在不代表可运行所需字段已齐全。"
+  ],
+  "research_boundary": {
+    "actor": "multisite_data_center_operator_and_jointly_controlled_energy_assets",
+    "site_ids": [],
+    "grid_regions": [],
+    "assessment_period": null,
+    "timezone_rule": null,
+    "currency": null,
+    "price_year": null,
+    "equal_service_required": true,
+    "true_deadlines_are_hard_bounds": true,
+    "task_quality_preserved": true,
+    "whole_facility_energy_required": true,
+    "operational_comparison": {
+      "common_existing_assets": true,
+      "common_valid_contracts": true,
+      "common_compute_demand": true,
+      "common_information": true,
+      "common_target": true,
+      "common_horizon": true
+    },
+    "energy_configuration_comparison": {
+      "common_GPU_and_network": true,
+      "common_candidate_set_and_capacity_limits": true,
+      "common_service_target_and_information": true,
+      "normal_scenario_keeps_fixed_operating_policy": true,
+      "report_separately_from_fixed_asset_operation": true
+    },
+    "pathway_comparison": {
+      "common_initial_assets_and_contracts": true,
+      "common_candidate_set": true,
+      "common_stage_targets": true,
+      "common_final_deadline": true,
+      "common_information_and_future_scenarios": true,
+      "carry_forward_each_scenario_own_assets_and_commitments": true,
+      "only_commissioned_assets_dispatchable": true,
+      "common_exogenous_GPU_and_network_upgrade_path": true
+    },
+    "stage_targets": [],
+    "final_deadline": null,
+    "discount_rate": null,
+    "discount_base_year": null,
+    "reference_energy_MWh": null
+  },
+  "permissions": {
+    "supply": {
+      "S0": {
+        "name": "既定供能规程",
+        "active_optimization": false,
+        "policy_evidence": null
+      },
+      "S1": {
+        "name": "本地供能调节",
+        "local_storage_and_clean_supply_and_purchase": true,
+        "equipment_and_contract_limits_required": true
+      },
+      "S2": {
+        "name": "多站供能协同",
+        "inherits": "S1",
+        "contract_authorized_allocation_only": true,
+        "delivery_eligibility_required": true,
+        "independent_site_storage_boundaries": true,
+        "task_relocation_included": false
+      }
+    },
+    "demand": {
+      "D0": {
+        "name": "既定派发排队执行",
+        "active_new_controls": [],
+        "policy_evidence": null
+      },
+      "D1": {
+        "name": "地点分配",
+        "eligible_new_or_unstarted_jobs_only": true,
+        "normal_queue_and_execution_preserved": true
+      },
+      "D2": {
+        "name": "地点与启动时间调整",
+        "inherits": "D1",
+        "active_delay_within_true_deadline": true
+      },
+      "D3": {
+        "name": "地点时间与执行过程调整",
+        "inherits": "D2",
+        "candidate_tools": [
+          "GPU_power_control",
+          "checkpoint_pause_resume",
+          "eligible_running_job_migration"
+        ],
+        "tool_evidence_status": "not_validated",
+        "tools_activated_for_run": []
+      }
+    },
+    "all_task_relocation_is_demand_side": true,
+    "eligibility_is_distinct_from_actual_usage": true
+  },
+  "operational_scenarios": [
+    {
+      "id": "N",
+      "group": "normal",
+      "supply_permission": "S0",
+      "demand_permission": "D0",
+      "normal_cost_reference": "N",
+      "matched_supply_only_reference": null,
+      "matched_demand_only_reference": null,
+      "execution_enabled": false
+    },
+    {
+      "id": "SL",
+      "group": "supply_only",
+      "supply_permission": "S1",
+      "demand_permission": "D0",
+      "normal_cost_reference": "N",
+      "matched_supply_only_reference": null,
+      "matched_demand_only_reference": null,
+      "execution_enabled": false
+    },
+    {
+      "id": "SM",
+      "group": "supply_only",
+      "supply_permission": "S2",
+      "demand_permission": "D0",
+      "normal_cost_reference": "N",
+      "matched_supply_only_reference": null,
+      "matched_demand_only_reference": null,
+      "execution_enabled": false
+    },
+    {
+      "id": "DL",
+      "group": "demand_only",
+      "supply_permission": "S0",
+      "demand_permission": "D1",
+      "normal_cost_reference": "N",
+      "matched_supply_only_reference": null,
+      "matched_demand_only_reference": null,
+      "execution_enabled": false
+    },
+    {
+      "id": "DLT",
+      "group": "demand_only",
+      "supply_permission": "S0",
+      "demand_permission": "D2",
+      "normal_cost_reference": "N",
+      "matched_supply_only_reference": null,
+      "matched_demand_only_reference": null,
+      "execution_enabled": false
+    },
+    {
+      "id": "DLTE",
+      "group": "demand_only",
+      "supply_permission": "S0",
+      "demand_permission": "D3",
+      "normal_cost_reference": "N",
+      "matched_supply_only_reference": null,
+      "matched_demand_only_reference": null,
+      "execution_enabled": false
+    },
+    {
+      "id": "SL_DL",
+      "group": "joint",
+      "supply_permission": "S1",
+      "demand_permission": "D1",
+      "normal_cost_reference": "N",
+      "matched_supply_only_reference": "SL",
+      "matched_demand_only_reference": "DL",
+      "execution_enabled": false
+    },
+    {
+      "id": "SL_DLT",
+      "group": "joint",
+      "supply_permission": "S1",
+      "demand_permission": "D2",
+      "normal_cost_reference": "N",
+      "matched_supply_only_reference": "SL",
+      "matched_demand_only_reference": "DLT",
+      "execution_enabled": false
+    },
+    {
+      "id": "SL_DLTE",
+      "group": "joint",
+      "supply_permission": "S1",
+      "demand_permission": "D3",
+      "normal_cost_reference": "N",
+      "matched_supply_only_reference": "SL",
+      "matched_demand_only_reference": "DLTE",
+      "execution_enabled": false
+    },
+    {
+      "id": "SM_DL",
+      "group": "joint",
+      "supply_permission": "S2",
+      "demand_permission": "D1",
+      "normal_cost_reference": "N",
+      "matched_supply_only_reference": "SM",
+      "matched_demand_only_reference": "DL",
+      "execution_enabled": false
+    },
+    {
+      "id": "SM_DLT",
+      "group": "joint",
+      "supply_permission": "S2",
+      "demand_permission": "D2",
+      "normal_cost_reference": "N",
+      "matched_supply_only_reference": "SM",
+      "matched_demand_only_reference": "DLT",
+      "execution_enabled": false
+    },
+    {
+      "id": "SM_DLTE",
+      "group": "joint",
+      "supply_permission": "S2",
+      "demand_permission": "D3",
+      "normal_cost_reference": "N",
+      "matched_supply_only_reference": "SM",
+      "matched_demand_only_reference": "DLTE",
+      "execution_enabled": false
+    }
+  ],
+  "management_philosophies": [
+    {
+      "id": "M_NEAR",
+      "name": "近期成本导向",
+      "focus": "stage_service_and_CFE_then_near_term_cost",
+      "same_information_as_other_philosophy": true,
+      "evaluated_against_common_final_deadline": true
+    },
+    {
+      "id": "M_PATH",
+      "name": "转型全过程导向",
+      "focus": "future_stage_targets_final_deadline_lifetimes_and_lead_times",
+      "same_information_as_other_philosophy": true
+    }
+  ],
+  "structural_combination_count": 24,
+  "completed_experiment_count": 0,
+  "CFE_cases": [
+    {
+      "id": "CFE_NONE",
+      "metric": "no_extra_CFE_target",
+      "target": null,
+      "normal_service_and_physical_balance_required": true
+    },
+    {
+      "id": "CFE_A90",
+      "metric": "site_annual_energy_weighted_hourly_matching",
+      "target": 0.9,
+      "evidence_type": "proposal_research_scenario"
+    },
+    {
+      "id": "CFE_A95",
+      "metric": "site_annual_energy_weighted_hourly_matching",
+      "target": 0.95,
+      "evidence_type": "proposal_research_scenario"
+    },
+    {
+      "id": "CFE_A99",
+      "metric": "site_annual_energy_weighted_hourly_matching",
+      "target": 0.99,
+      "evidence_type": "proposal_research_scenario"
+    },
+    {
+      "id": "CFE_A100_STRICT",
+      "metric": "site_annual_energy_weighted_hourly_matching_with_strict_hourly_enforcement",
+      "target": 1.0,
+      "every_site_every_positive_load_hour_match_required": 1.0,
+      "cross_hour_or_cross_site_offset_allowed": false,
+      "zero_load_hour_ratio": "undefined_excluded_from_ratio_denominator",
+      "numerical_tolerance": null,
+      "evidence_type": "proposal_research_scenario"
+    },
+    {
+      "id": "CFE_H90",
+      "metric": "every_site_every_positive_load_hour_minimum_match",
+      "target": 0.9,
+      "evidence_type": "calculation_details_proposed_research_scenario",
+      "execution_enabled": false
+    },
+    {
+      "id": "CFE_H95",
+      "metric": "every_site_every_positive_load_hour_minimum_match",
+      "target": 0.95,
+      "evidence_type": "calculation_details_proposed_research_scenario",
+      "execution_enabled": false
+    },
+    {
+      "id": "CFE_H99",
+      "metric": "every_site_every_positive_load_hour_minimum_match",
+      "target": 0.99,
+      "evidence_type": "calculation_details_proposed_research_scenario",
+      "execution_enabled": false
+    },
+    {
+      "id": "CFE_H100",
+      "metric": "every_site_every_positive_load_hour_minimum_match",
+      "target": 1.0,
+      "evidence_type": "calculation_details_proposed_research_scenario",
+      "equivalent_to": "CFE_A100_STRICT_when_same_accounting_boundary_and_exact_values",
+      "execution_enabled": false
+    }
+  ],
+  "control_thresholds": {
+    "proposed_eligible_task_share_grid": [0, 0.25, 0.5, 0.75, 1.0],
+    "proposed_max_active_delay_h_grid": [0, 1, 4, 12, 24],
+    "grid_evidence_type": "calculation_details_proposed_research_scenario",
+    "fixed_nested_eligible_task_lists_required": true,
+    "eligible_task_list_version": null,
+    "share_denominator": "confirmed_eligible_jobs_by_type_report_share_of_all_jobs_separately",
+    "delay_ge_48h_requires_business_evidence_or_explicit_hypothetical_sensitivity_label": true,
+    "eligible_task_share": null,
+    "max_active_delay_h": null,
+    "cross_site_receiving_headroom": null,
+    "allowed_power_performance_range": null,
+    "restore_and_migration_cost_rule": null,
+    "unknown_authorization_must_not_be_assumed_true": true
+  },
+  "accounting": {
+    "flexibility_net_value": "C_N(q,F,H,M)-C_g(q,F,H,M)",
+    "demand_increment_after_supply": "C_S(q,F,H,M)-C_SD(q,F,H,M)",
+    "supply_increment_after_demand": "C_D(q,F,H,M)-C_SD(q,F,H,M)",
+    "synergy": "C_S(q,F,H,M)+C_D(q,F,H,M)-C_SD(q,F,H,M)-C_N(q,F,H,M)",
+    "CFE_extra_cost": "C_g(q,F,H,M)-C_g(no_extra_CFE,F,H,M)",
+    "infeasible_cost_differences": null,
+    "infeasible_comparisons_must_report_status_and_reason": true,
+    "unit_energy_value_denominator": "same_jobs_whole_facility_energy_under_fixed_reference_execution_policy_common_across_scenarios_and_CFE_targets",
+    "multiyear_unit_energy_value_denominator": "discounted_sum_of_common_reference_energy",
+    "cost_reduction_ratio_denominator": "same_CFE_normal_operation_total_cost_including_common_fixed_costs_report_only_if_positive",
+    "cost_reduction_ratio_scale": "percent",
+    "CFE_value_change": "V_g(q,F,H,M)-V_g(no_extra_CFE,F,H,M)",
+    "terminal_facility_and_full_storage_loss_declaration_boundaries_both_required": true,
+    "clean_charge_losses_not_terminal_matched_energy_or_extra_unmatched_allowance": true,
+    "common_initial_and_terminal_inventory_rules_required": true,
+    "corporate_cashflow_participation_value_separate": true,
+    "no_new_storage_is_not_normal_operation_reference": true,
+    "no_extra_CFE_is_not_normal_operation_reference": true
+  },
+  "inputs": {
+    "raw_files": [],
+    "validated_tables": [],
+    "source_inventory": "see_project_shared_source_register",
+    "initial_assets": null,
+    "candidate_investments": null,
+    "baseline_policies": null,
+    "future_scenarios": []
+  },
+  "run_gates": [
+    "study_scope_and_shared_period_confirmed",
+    "input_files_and_licenses_registered",
+    "task_service_and_control_eligibility_validated",
+    "site_and_time_alignment_validated",
+    "normal_policies_replayable",
+    "whole_facility_energy_accounting_defined",
+    "CFE_attributes_delivery_and_storage_tracking_defined",
+    "cost_ownership_units_and_price_year_defined",
+    "self_contained_methods_reviewed",
+    "scenario_specific_required_fields_complete"
+  ],
+  "output_policy": {
+    "numerical_results_allowed_before_run_gates": false,
+    "hypotheses_must_not_be_reported_as_findings": true,
+    "negative_or_zero_value_and_infeasibility_must_be_retained": true
+  }
+}

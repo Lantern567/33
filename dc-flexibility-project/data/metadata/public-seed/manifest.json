@@ -1,0 +1,722 @@
+{
+  "retrieval_date_local": "2026-10-19",
+  "timezone": "Asia/Shanghai",
+  "single_file_limit_bytes": 10485760,
+  "files": [
+    {
+      "path": "raw/alibaba_gpu_v2020/pai_machine_spec.tar.gz",
+      "source_url": "https://aliopentrace.oss-cn-beijing.aliyuncs.com/v2020GPUTraces/pai_machine_spec.tar.gz",
+      "final_url": "https://aliopentrace.oss-cn-beijing.aliyuncs.com/v2020GPUTraces/pai_machine_spec.tar.gz",
+      "retrieved_at": "2026-10-19T14:21:57.033738+08:00",
+      "bytes": 30449,
+      "sha256": "cc0d38a4045af1b1af8179de8b1b54b1ddd995e6160d6d061a6b1000f1276c2d",
+      "kind": "source_archive",
+      "content_type": "application/gzip",
+      "license_source": "https://github.com/alibaba/clusterdata#our-motivation",
+      "note": "仅机器规格，不是任务轨迹或负荷时间序列；按官方 README 用于研究/学习。",
+      "official_sha256_match": true,
+      "license_status": "官方 README 明示研究/学习用途；未发现独立 LICENSE，其他用途待核实。"
+    },
+    {
+      "path": "references/ESGC_Cost_Performance_Report_2022_PNNL-33283.pdf",
+      "source_url": "https://www.pnnl.gov/sites/default/files/media/file/ESGC%20Cost%20Performance%20Report%202022%20PNNL-33283.pdf",
+      "final_url": "https://www.pnnl.gov/sites/default/files/media/file/ESGC%20Cost%20Performance%20Report%202022%20PNNL-33283.pdf",
+      "retrieved_at": "2026-10-19T14:22:11.246271+08:00",
+      "bytes": 4988887,
+      "sha256": "8c15c2fdd30f0452d75e15767fb9128ac866c3e9dd15a03669d92fad1048976d",
+      "kind": "reference_pdf",
+      "content_type": "application/pdf",
+      "license_source": "https://www.pnnl.gov/energy-storage-cost-and-performance-database",
+      "note": "仅归档官方参考报告；未完成参数提取，不能当作已标定中国本地储能成本。",
+      "license_status": "公开官方参考文档；链接是资料来源，不代表已单独核验再分发许可。"
+    },
+    {
+      "path": "references/ESGC_LCOS_Workbook_v2024_Documentation.pdf",
+      "source_url": "https://www.pnnl.gov/sites/default/files/media/file/ESGC_LCOS_Workbook_v2024_Documentation.pdf",
+      "final_url": "https://www.pnnl.gov/sites/default/files/media/file/ESGC_LCOS_Workbook_v2024_Documentation.pdf",
+      "retrieved_at": "2026-10-19T14:22:02.851485+08:00",
+      "bytes": 817844,
+      "sha256": "d72b5b35e330c3611f2bb8b0c694b51252a486fccb7886b810b9114762d48002",
+      "kind": "reference_pdf",
+      "content_type": "application/pdf",
+      "license_source": "https://www.pnnl.gov/energy-storage-cost-and-performance-database",
+      "note": "仅归档官方说明文档；未下载或运行工作簿，未完成价格年份/地域/技术口径核对。",
+      "license_status": "公开官方参考文档；链接是资料来源，不代表已单独核验再分发许可。"
+    },
+    {
+      "path": "references/zeus_LICENSE.txt",
+      "source_url": "https://raw.githubusercontent.com/ml-energy/zeus/master/LICENSE",
+      "final_url": "https://raw.githubusercontent.com/ml-energy/zeus/master/LICENSE",
+      "retrieved_at": "2026-10-19T14:21:57.438628+08:00",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "kind": "license",
+      "content_type": "text/plain; charset=utf-8",
+      "license_source": "https://github.com/ml-energy/zeus/blob/master/LICENSE",
+      "note": "仓库级 Apache-2.0 许可证原文；数据附加条款仍应结合目录说明核验。",
+      "license_status": "仓库级 Apache-2.0；保留许可证副本，数据附加条款未独立确认。"
+    },
+    {
+      "path": "raw/zeus_nsdi23/summary_power_a40.csv",
+      "source_url": "https://raw.githubusercontent.com/ml-energy/zeus/master/examples/research_reproducibility/zeus_nsdi23/trace/summary_power_a40.csv",
+      "final_url": "https://raw.githubusercontent.com/ml-energy/zeus/master/examples/research_reproducibility/zeus_nsdi23/trace/summary_power_a40.csv",
+      "retrieved_at": "2026-10-19T14:21:57.695166+08:00",
+      "bytes": 29641,
+      "sha256": "f4ec111fc9b06b353182faab9160ecb1236a486b2741ed93383b80497332031e",
+      "kind": "source_csv",
+      "content_type": "text/plain; charset=utf-8",
+      "license_source": "https://github.com/ml-energy/zeus/blob/master/LICENSE",
+      "note": "实验配置汇总，不是设施逐时用电；GPU 型号按文件名独立保留。",
+      "github_blob_sha": "e3eeba044d97be66fef5da5f2bcbfe668ae19ef5",
+      "csv_check": {
+        "path": "raw/zeus_nsdi23/summary_power_a40.csv",
+        "data_rows": 453,
+        "columns": [
+          "dataset",
+          "network",
+          "batch_size",
+          "optimizer",
+          "power_limit",
+          "time_per_epoch",
+          "average_power"
+        ],
+        "source_has_header": true,
+        "schema_source": "https://github.com/ml-energy/zeus/tree/master/examples/research_reproducibility/zeus_nsdi23/trace",
+        "units": {
+          "dataset": "类别",
+          "network": "类别",
+          "batch_size": "samples per batch",
+          "optimizer": "类别",
+          "power_limit": "W",
+          "time_per_epoch": "s",
+          "average_power": "W"
+        },
+        "inconsistent_width_rows": [],
+        "duplicate_full_rows": 0,
+        "candidate_key": [
+          "dataset",
+          "network",
+          "batch_size",
+          "optimizer",
+          "power_limit"
+        ],
+        "duplicate_candidate_keys": 0,
+        "fields": {
+          "dataset": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 6,
+            "categories": {
+              "cifar100": 99,
+              "imagenet": 81,
+              "librispeech": 54,
+              "movielens-1m": 117,
+              "squad": 72,
+              "sentiment140": 30
+            }
+          },
+          "network": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 5,
+            "categories": {
+              "shufflenetv2": 99,
+              "resnet50": 81,
+              "deepspeech2": 54,
+              "ncf": 117,
+              "bert_base_uncased": 102
+            }
+          },
+          "batch_size": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 20,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 8.0,
+            "numeric_max": 32768.0
+          },
+          "optimizer": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 3,
+            "categories": {
+              "adadelta": 180,
+              "adamw": 156,
+              "adam": 117
+            }
+          },
+          "power_limit": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 9,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 100.0,
+            "numeric_max": 300.0
+          },
+          "time_per_epoch": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 452,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 8.116,
+            "numeric_max": 34906.935
+          },
+          "average_power": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 453,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 79.9314025667197,
+            "numeric_max": 276.87542810672784
+          }
+        },
+        "gpu_type_from_filename": "a40"
+      },
+      "license_status": "仓库级 Apache-2.0；保留许可证副本，数据附加条款未独立确认。"
+    },
+    {
+      "path": "raw/zeus_nsdi23/summary_power_p100.csv",
+      "source_url": "https://raw.githubusercontent.com/ml-energy/zeus/master/examples/research_reproducibility/zeus_nsdi23/trace/summary_power_p100.csv",
+      "final_url": "https://raw.githubusercontent.com/ml-energy/zeus/master/examples/research_reproducibility/zeus_nsdi23/trace/summary_power_p100.csv",
+      "retrieved_at": "2026-10-19T14:21:58.296450+08:00",
+      "bytes": 18163,
+      "sha256": "158e9a6784b6e2d26710529b132cf173b227dc8688f4931c19a637bce2b7503b",
+      "kind": "source_csv",
+      "content_type": "text/plain; charset=utf-8",
+      "license_source": "https://github.com/ml-energy/zeus/blob/master/LICENSE",
+      "note": "实验配置汇总，不是设施逐时用电；GPU 型号按文件名独立保留。",
+      "github_blob_sha": "65247e8382155d1454e71dd4f8e83971778c29a3",
+      "csv_check": {
+        "path": "raw/zeus_nsdi23/summary_power_p100.csv",
+        "data_rows": 270,
+        "columns": [
+          "dataset",
+          "network",
+          "batch_size",
+          "optimizer",
+          "power_limit",
+          "time_per_epoch",
+          "average_power"
+        ],
+        "source_has_header": true,
+        "schema_source": "https://github.com/ml-energy/zeus/tree/master/examples/research_reproducibility/zeus_nsdi23/trace",
+        "units": {
+          "dataset": "类别",
+          "network": "类别",
+          "batch_size": "samples per batch",
+          "optimizer": "类别",
+          "power_limit": "W",
+          "time_per_epoch": "s",
+          "average_power": "W"
+        },
+        "inconsistent_width_rows": [],
+        "duplicate_full_rows": 0,
+        "candidate_key": [
+          "dataset",
+          "network",
+          "batch_size",
+          "optimizer",
+          "power_limit"
+        ],
+        "duplicate_candidate_keys": 0,
+        "fields": {
+          "dataset": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 6,
+            "categories": {
+              "cifar100": 54,
+              "imagenet": 30,
+              "librispeech": 54,
+              "movielens-1m": 78,
+              "squad": 30,
+              "sentiment140": 24
+            }
+          },
+          "network": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 5,
+            "categories": {
+              "shufflenetv2": 54,
+              "resnet50": 30,
+              "deepspeech2": 54,
+              "ncf": 78,
+              "bert_base_uncased": 54
+            }
+          },
+          "batch_size": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 18,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 4.0,
+            "numeric_max": 16384.0
+          },
+          "optimizer": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 3,
+            "categories": {
+              "adadelta": 84,
+              "adamw": 108,
+              "adam": 78
+            }
+          },
+          "power_limit": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 6,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 125.0,
+            "numeric_max": 250.0
+          },
+          "time_per_epoch": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 269,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 11.822999999999999,
+            "numeric_max": 64009.14
+          },
+          "average_power": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 270,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 33.29468595272693,
+            "numeric_max": 180.08916459828103
+          }
+        },
+        "gpu_type_from_filename": "p100"
+      },
+      "license_status": "仓库级 Apache-2.0；保留许可证副本，数据附加条款未独立确认。"
+    },
+    {
+      "path": "raw/zeus_nsdi23/summary_power_rtx6000.csv",
+      "source_url": "https://raw.githubusercontent.com/ml-energy/zeus/master/examples/research_reproducibility/zeus_nsdi23/trace/summary_power_rtx6000.csv",
+      "final_url": "https://raw.githubusercontent.com/ml-energy/zeus/master/examples/research_reproducibility/zeus_nsdi23/trace/summary_power_rtx6000.csv",
+      "retrieved_at": "2026-10-19T14:21:58.435558+08:00",
+      "bytes": 27704,
+      "sha256": "edccecc7f8b7a6102962b03f0f37767dd9cd2f03469ebccadc9805e82901bdc4",
+      "kind": "source_csv",
+      "content_type": "text/plain; charset=utf-8",
+      "license_source": "https://github.com/ml-energy/zeus/blob/master/LICENSE",
+      "note": "实验配置汇总，不是设施逐时用电；GPU 型号按文件名独立保留。",
+      "github_blob_sha": "b37519739a17e7918a9a542802efeb36c573794f",
+      "csv_check": {
+        "path": "raw/zeus_nsdi23/summary_power_rtx6000.csv",
+        "data_rows": 410,
+        "columns": [
+          "dataset",
+          "network",
+          "batch_size",
+          "optimizer",
+          "power_limit",
+          "time_per_epoch",
+          "average_power"
+        ],
+        "source_has_header": true,
+        "schema_source": "https://github.com/ml-energy/zeus/tree/master/examples/research_reproducibility/zeus_nsdi23/trace",
+        "units": {
+          "dataset": "类别",
+          "network": "类别",
+          "batch_size": "samples per batch",
+          "optimizer": "类别",
+          "power_limit": "W",
+          "time_per_epoch": "s",
+          "average_power": "W"
+        },
+        "inconsistent_width_rows": [],
+        "duplicate_full_rows": 0,
+        "candidate_key": [
+          "dataset",
+          "network",
+          "batch_size",
+          "optimizer",
+          "power_limit"
+        ],
+        "duplicate_candidate_keys": 0,
+        "fields": {
+          "dataset": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 6,
+            "categories": {
+              "cifar100": 80,
+              "imagenet": 56,
+              "librispeech": 88,
+              "movielens-1m": 98,
+              "squad": 48,
+              "sentiment140": 40
+            }
+          },
+          "network": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 5,
+            "categories": {
+              "shufflenetv2": 80,
+              "resnet50": 56,
+              "deepspeech2": 88,
+              "ncf": 98,
+              "bert_base_uncased": 88
+            }
+          },
+          "batch_size": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 20,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 4.0,
+            "numeric_max": 16384.0
+          },
+          "optimizer": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 3,
+            "categories": {
+              "adadelta": 136,
+              "adamw": 176,
+              "adam": 98
+            }
+          },
+          "power_limit": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 8,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 100.0,
+            "numeric_max": 260.0
+          },
+          "time_per_epoch": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 410,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 9.506666666666668,
+            "numeric_max": 20305.875
+          },
+          "average_power": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 410,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 54.69093677376089,
+            "numeric_max": 252.4700015253679
+          }
+        },
+        "gpu_type_from_filename": "rtx6000"
+      },
+      "license_status": "仓库级 Apache-2.0；保留许可证副本，数据附加条款未独立确认。"
+    },
+    {
+      "path": "raw/zeus_nsdi23/summary_power_v100.csv",
+      "source_url": "https://raw.githubusercontent.com/ml-energy/zeus/master/examples/research_reproducibility/zeus_nsdi23/trace/summary_power_v100.csv",
+      "final_url": "https://raw.githubusercontent.com/ml-energy/zeus/master/examples/research_reproducibility/zeus_nsdi23/trace/summary_power_v100.csv",
+      "retrieved_at": "2026-10-19T14:21:59.114182+08:00",
+      "bytes": 32534,
+      "sha256": "f0b066dd1a451bd78f730e001ac3a7c411979bc7f0846f12c1a9fb604aa90628",
+      "kind": "source_csv",
+      "content_type": "text/plain; charset=utf-8",
+      "license_source": "https://github.com/ml-energy/zeus/blob/master/LICENSE",
+      "note": "实验配置汇总，不是设施逐时用电；GPU 型号按文件名独立保留。",
+      "github_blob_sha": "a574ae321e48d7c1dcf1ff9d833e62fe2481b28e",
+      "csv_check": {
+        "path": "raw/zeus_nsdi23/summary_power_v100.csv",
+        "data_rows": 476,
+        "columns": [
+          "dataset",
+          "network",
+          "batch_size",
+          "optimizer",
+          "power_limit",
+          "time_per_epoch",
+          "average_power"
+        ],
+        "source_has_header": true,
+        "schema_source": "https://github.com/ml-energy/zeus/tree/master/examples/research_reproducibility/zeus_nsdi23/trace",
+        "units": {
+          "dataset": "类别",
+          "network": "类别",
+          "batch_size": "samples per batch",
+          "optimizer": "类别",
+          "power_limit": "W",
+          "time_per_epoch": "s",
+          "average_power": "W"
+        },
+        "inconsistent_width_rows": [],
+        "duplicate_full_rows": 0,
+        "candidate_key": [
+          "dataset",
+          "network",
+          "batch_size",
+          "optimizer",
+          "power_limit"
+        ],
+        "duplicate_candidate_keys": 0,
+        "fields": {
+          "dataset": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 6,
+            "categories": {
+              "cifar100": 140,
+              "imagenet": 56,
+              "librispeech": 105,
+              "movielens-1m": 91,
+              "squad": 49,
+              "sentiment140": 35
+            }
+          },
+          "network": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 5,
+            "categories": {
+              "shufflenetv2": 140,
+              "resnet50": 56,
+              "deepspeech2": 105,
+              "ncf": 91,
+              "bert_base_uncased": 84
+            }
+          },
+          "batch_size": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 23,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 2.0,
+            "numeric_max": 16384.0
+          },
+          "optimizer": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 3,
+            "categories": {
+              "adadelta": 126,
+              "adam": 161,
+              "adamw": 189
+            }
+          },
+          "power_limit": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 7,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 100.0,
+            "numeric_max": 250.0
+          },
+          "time_per_epoch": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 476,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 7.018000000000001,
+            "numeric_max": 48815.16
+          },
+          "average_power": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 476,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 34.75158532315594,
+            "numeric_max": 228.35203177238955
+          }
+        },
+        "gpu_type_from_filename": "v100"
+      },
+      "license_status": "仓库级 Apache-2.0；保留许可证副本，数据附加条款未独立确认。"
+    },
+    {
+      "path": "raw/zeus_nsdi23/summary_train.csv",
+      "source_url": "https://raw.githubusercontent.com/ml-energy/zeus/master/examples/research_reproducibility/zeus_nsdi23/trace/summary_train.csv",
+      "final_url": "https://raw.githubusercontent.com/ml-energy/zeus/master/examples/research_reproducibility/zeus_nsdi23/trace/summary_train.csv",
+      "retrieved_at": "2026-10-19T14:21:59.347703+08:00",
+      "bytes": 186977,
+      "sha256": "076b35615349ee624403006e5ad67fd9ebda92af690c7750f8bb0c2ab92c0cf4",
+      "kind": "source_csv",
+      "content_type": "text/plain; charset=utf-8",
+      "license_source": "https://github.com/ml-energy/zeus/blob/master/LICENSE",
+      "note": "实验配置汇总，不是设施逐时用电；GPU 型号按文件名独立保留。",
+      "github_blob_sha": "091cb883d7d7753cd7564e0d9012f744305be61c",
+      "csv_check": {
+        "path": "raw/zeus_nsdi23/summary_train.csv",
+        "data_rows": 3759,
+        "columns": [
+          "dataset",
+          "network",
+          "batch_size",
+          "optimizer",
+          "learning_rate",
+          "run",
+          "target_metric",
+          "target_epoch"
+        ],
+        "source_has_header": true,
+        "schema_source": "https://github.com/ml-energy/zeus/tree/master/examples/research_reproducibility/zeus_nsdi23/trace",
+        "units": {
+          "dataset": "类别",
+          "network": "类别",
+          "batch_size": "samples per batch",
+          "optimizer": "类别",
+          "learning_rate": "未量纲化超参数",
+          "run": "重复运行索引",
+          "target_metric": "依数据集/指标而异，待逐项核对，不可跨任务直接比较",
+          "target_epoch": "epoch index"
+        },
+        "inconsistent_width_rows": [],
+        "duplicate_full_rows": 0,
+        "candidate_key": [
+          "dataset",
+          "network",
+          "batch_size",
+          "optimizer",
+          "learning_rate",
+          "run",
+          "target_metric"
+        ],
+        "duplicate_candidate_keys": 0,
+        "fields": {
+          "dataset": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 6,
+            "categories": {
+              "cifar100": 1026,
+              "imagenet": 494,
+              "librispeech": 518,
+              "movielens-1m": 441,
+              "squad": 640,
+              "sentiment140": 640
+            }
+          },
+          "network": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 5,
+            "categories": {
+              "shufflenetv2": 1026,
+              "resnet50": 494,
+              "deepspeech2": 518,
+              "ncf": 441,
+              "bert_base_uncased": 1280
+            }
+          },
+          "batch_size": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 24,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 2.0,
+            "numeric_max": 16384.0
+          },
+          "optimizer": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 3,
+            "categories": {
+              "adadelta": 1520,
+              "adamw": 1798,
+              "adam": 441
+            }
+          },
+          "learning_rate": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 47,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 1e-07,
+            "numeric_max": 0.1
+          },
+          "run": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 10,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 1.0,
+            "numeric_max": 10.0
+          },
+          "target_metric": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 45,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 0.05,
+            "numeric_max": 86.0
+          },
+          "target_epoch": {
+            "missing_count": 849,
+            "distinct_nonmissing_count": 96,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 1.0,
+            "numeric_max": 566.0
+          }
+        }
+      },
+      "license_status": "仓库级 Apache-2.0；保留许可证副本，数据附加条款未独立确认。"
+    },
+    {
+      "path": "raw/alibaba_gpu_v2020/pai_machine_spec.csv",
+      "source_url": "https://aliopentrace.oss-cn-beijing.aliyuncs.com/v2020GPUTraces/pai_machine_spec.tar.gz",
+      "derived_from": "raw/alibaba_gpu_v2020/pai_machine_spec.tar.gz",
+      "retrieved_at": "2026-10-19T14:22:11.257984+08:00",
+      "bytes": 73311,
+      "sha256": "251e9e33649155a6a935fdc1dc0e90cd4698206936b60bd8fce60ff2ccd51439",
+      "official_sha256_match": true,
+      "kind": "source_csv",
+      "license_source": "https://github.com/alibaba/clusterdata#our-motivation",
+      "note": "仅解压原字节，未改列名、未清洗；无标题行，字段见官方 README。",
+      "csv_check": {
+        "path": "raw/alibaba_gpu_v2020/pai_machine_spec.csv",
+        "data_rows": 1897,
+        "columns": [
+          "machine",
+          "gpu_type",
+          "cap_cpu",
+          "cap_mem",
+          "cap_gpu"
+        ],
+        "source_has_header": false,
+        "schema_source": "https://github.com/alibaba/clusterdata/blob/master/cluster-trace-gpu-v2020/README.md#pai_machine_spec",
+        "units": {
+          "machine": "标识符",
+          "gpu_type": "类别",
+          "cap_cpu": "CPU cores",
+          "cap_mem": "GB",
+          "cap_gpu": "GPU count"
+        },
+        "inconsistent_width_rows": [],
+        "duplicate_full_rows": 0,
+        "candidate_key": [
+          "machine"
+        ],
+        "duplicate_candidate_keys": 0,
+        "fields": {
+          "machine": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 1897
+          },
+          "gpu_type": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 6,
+            "categories": {
+              "CPU": 83,
+              "T4": 497,
+              "MISC": 280,
+              "P100": 798,
+              "V100": 104,
+              "V100M32": 135
+            }
+          },
+          "cap_cpu": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 2,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 64.0,
+            "numeric_max": 96.0
+          },
+          "cap_mem": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 2,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 384.0,
+            "numeric_max": 512.0
+          },
+          "cap_gpu": {
+            "missing_count": 0,
+            "distinct_nonmissing_count": 3,
+            "numeric_nonfinite_count": 0,
+            "numeric_min": 0.0,
+            "numeric_max": 8.0
+          }
+        }
+      },
+      "license_status": "官方 README 明示研究/学习用途；未发现独立 LICENSE，其他用途待核实。"
+    }
+  ],
+  "failed_requests": [],
+  "scope": "原样下载与结构核查；无模型求解、训练、设施负荷重建或储能参数标定。",
+  "license_notes": {
+    "alibaba": "官方仓库 README 允许研究/学习用途；未找到根目录 LICENSE 文件，不据此推断商业使用或再分发授权。参考 https://github.com/alibaba/clusterdata#our-motivation 。",
+    "zeus": "官方仓库 LICENSE 为 Apache-2.0，已归档原文；保留原始文件与引用。数据目录未见单独许可证，后续再分发前应核实数据附加条款。",
+    "pnnl": "PNNL 官方公开参考文档。仅为研究资料归档；未另行确认再分发许可，公开发布本项目时优先引用官方链接。"
+  },
+  "quality_check_scope": "UTF-8 解码、CSV 字段与行数、列数一致性、缺失值、观测范围、完全重复记录与候选键重复。没有清洗、插补或模型求解。",
+  "schema_version": 2,
+  "published_content": "metadata_only_no_raw_data_or_reference_pdfs",
+  "path_base": "All files[].path and derived_from paths are relative to the local public-seed root. Suggested project root for restoration: data/raw/public-seed/. These paths are not files included in this Git repository.",
+  "local_original_package": "cfe-two-directions-step1-20261019/05_public_seed",
+  "repository_preparation_check": {
+    "date": "2026-10-19",
+    "scope": "Recomputed byte counts and SHA-256 for all 10 files in the existing local output package; no new download or model calculation.",
+    "files_checked": 10,
+    "all_hashes_match": true,
+    "raw_files_included_in_git": false
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "version": "0.2-repository-step1",
+  "status": "template_not_observations",
+  "instructions": "复制模板再录入。record_template不是数据记录；未知为null。来源登记状态必须区分metadata_checked、received、structure_checked、model_ready。",
+  "tables": {
+    "source_register": {
+      "record_template": {
+        "source_id": null,
+        "record_id": null,
+        "source_row_or_page": null,
+        "evidence_type": null,
+        "missing_reason": null,
+        "title": null,
+        "url_or_holder": null,
+        "local_path": null,
+        "retrieved_at": null,
+        "version": null,
+        "sha256": null,
+        "license": null,
+        "use_scope": null,
+        "status": null
+      },
+      "records": []
+    },
+    "facilities": {
+      "record_template": {
+        "facility_id": null,
+        "name": null,
+        "country": null,
+        "grid_region": null,
+        "record_level": null,
+        "latitude": null,
+        "longitude": null,
+        "geometry_precision": null,
+        "timezone": null,
+        "service_type": null,
+        "connection_limit_mw": null,
+        "record_id": null,
+        "source_id": null,
+        "source_row_or_page": null,
+        "evidence_type": null,
+        "missing_reason": null
+      },
+      "records": []
+    },
+    "facility_intervals": {
+      "record_template": {
+        "facility_id": null,
+        "meter_boundary": null,
+        "start": null,
+        "time_kind": null,
+        "original_timezone": null,
+        "interval_minutes": null,
+        "energy_kwh": null,
+        "average_power_kw": null,
+        "it_power_kw": null,
+        "pue": null,
+        "quality_flag": null,
+        "record_id": null,
+        "source_id": null,
+        "source_row_or_page": null,
+        "evidence_type": null,
+        "missing_reason": null
+      },
+      "records": []
+    },
+    "cfe_supply": {
+      "record_template": {
+        "contract_id": null,
+        "interval_start": null,
+        "grid_region": null,
+        "eligible_mwh": null,
+        "available_mwh": null,
+        "attributable_share": null,
+        "already_committed_mwh": null,
+        "delivery_path": null,
+        "loss_fraction": null,
+        "attribute_id": null,
+        "record_id": null,
+        "source_id": null,
+        "source_row_or_page": null,
+        "evidence_type": null,
+        "missing_reason": null
+      },
+      "records": []
+    },
+    "tariffs": {
+      "record_template": {
+        "tariff_id": null,
+        "valid_from": null,
+        "valid_to": null,
+        "customer_class": null,
+        "currency": null,
+        "price_year": null,
+        "energy_charge_per_kwh": null,
+        "demand_charge_per_kw": null,
+        "billing_interval_minutes": null,
+        "lookback_months": null,
+        "fixed_fee": null,
+        "record_id": null,
+        "source_id": null,
+        "source_row_or_page": null,
+        "evidence_type": null,
+        "missing_reason": null
+      },
+      "records": []
+    },
+    "storage_parameters": {
+      "record_template": {
+        "technology_id": null,
+        "parameter_name": null,
+        "version": null,
+        "value": null,
+        "unit": null,
+        "region": null,
+        "price_year": null,
+        "basis": null,
+        "lifetime_type": null,
+        "boundary": null,
+        "record_id": null,
+        "source_id": null,
+        "source_row_or_page": null,
+        "evidence_type": null,
+        "missing_reason": null
+      },
+      "records": []
+    },
+    "asset_cohorts": {
+      "record_template": {
+        "asset_id": null,
+        "vintage": null,
+        "facility_id": null,
+        "technology_id": null,
+        "commission_year": null,
+        "remaining_life": null,
+        "power_mw": null,
+        "energy_mwh": null,
+        "initial_soc_mwh": null,
+        "initial_cfe_soc_mwh": null,
+        "reserve_mwh": null,
+        "lead_time_months": null,
+        "replacement_rule": null,
+        "salvage_rule": null,
+        "record_id": null,
+        "source_id": null,
+        "source_row_or_page": null,
+        "evidence_type": null,
+        "missing_reason": null
+      },
+      "records": []
+    },
+    "emission_factors": {
+      "record_template": {
+        "factor_id": null,
+        "valid_from": null,
+        "value": null,
+        "unit": null,
+        "location": null,
+        "temporal_resolution": null,
+        "average_or_marginal": null,
+        "included_stages": null,
+        "includes_charging": null,
+        "allocation_rule": null,
+        "record_id": null,
+        "source_id": null,
+        "source_row_or_page": null,
+        "evidence_type": null,
+        "missing_reason": null
+      },
+      "records": []
+    },
+    "workload_tasks": {
+      "record_template": {
+        "job_id": null,
+        "arrival": null,
+        "time_kind": null,
+        "work_amount": null,
+        "work_unit": null,
+        "quality_target": null,
+        "true_deadline": null,
+        "origin_site": null,
+        "allowed_sites": null,
+        "control_eligibility": null,
+        "gpu_type": null,
+        "profile_id": null,
+        "record_id": null,
+        "source_id": null,
+        "source_row_or_page": null,
+        "evidence_type": null,
+        "missing_reason": null
+      },
+      "records": []
+    },
+    "stages": {
+      "record_template": {
+        "pathway_id": null,
+        "stage_id": null,
+        "start": null,
+        "end": null,
+        "annual_weighted_cfe_target": null,
+        "hourly_floor": null,
+        "final_deadline": null,
+        "budget": null,
+        "information_set": null,
+        "hardware_update_path": null,
+        "record_id": null,
+        "source_id": null,
+        "source_row_or_page": null,
+        "evidence_type": null,
+        "missing_reason": null
+      },
+      "records": []
+    },
+    "cfe_allocations": {
+      "record_template": {
+        "allocation_id": null,
+        "contract_id": null,
+        "attribute_id": null,
+        "facility_id": null,
+        "interval_start": null,
+        "matched_to_load_mwh": null,
+        "charged_to_clean_storage_mwh": null,
+        "claimed_loss_aux_mwh": null,
+        "delivered_mwh": null,
+        "delivery_evidence": null,
+        "record_id": null,
+        "source_id": null,
+        "source_row_or_page": null,
+        "evidence_type": null,
+        "missing_reason": null
+      },
+      "records": []
+    },
+    "site_technology_eligibility": {
+      "record_template": {
+        "facility_id": null,
+        "technology_id": null,
+        "version": null,
+        "engineering_status": null,
+        "land_available": null,
+        "connection_verified": null,
+        "reserve_response_verified": null,
+        "lead_time_months": null,
+        "evidence_path": null,
+        "reviewer": null,
+        "reviewed_at": null,
+        "record_id": null,
+        "source_id": null,
+        "source_row_or_page": null,
+        "evidence_type": null,
+        "missing_reason": null
+      },
+      "records": []
+    }
+  },
+  "readiness_reference": "../../data/metadata/step1-data-readiness.md"
+}

@@ -1,2 +1,5 @@
 # 归档原文保持字节一致，以便复核 SHA-256。
 dc-flexibility-project/sources/local-documents/*.md -text
+
+# 云端归档清单保持字节一致，便于跨系统复核 SHA-256。
+dc-flexibility-project/data/metadata/baidu-netdisk-archive-*.json -text
