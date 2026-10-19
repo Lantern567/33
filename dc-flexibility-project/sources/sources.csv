@@ -1,0 +1,17 @@
+source,status,records_snapshot,coverage,granularity,license_or_restriction,url,notes
+PeeringDB,open API,5860,169 countries,facility/building-address,AUP restrictions,https://www.peeringdb.com/apidocs/,5256 records with coordinates
+OpenStreetMap,open query,4521 in Data Center Watch subset,58 countries in subset,point/building/campus,ODbL,https://wiki.openstreetmap.org/wiki/Tag:telecom%3Ddata_center,Global direct query should be partitioned
+PNNL IM3,open download,1468 geometries,United States,building polygon/campus polygon/point,ODbL,https://immm-sfa.github.io/datacenter-atlas/,1239 building polygons and 135 campus multipolygons
+China large-scale data centers 2024,open download,1005,China,verified facility point,CC BY 4.0,https://doi.org/10.57760/sciencedb.32970,1003 unique coordinate pairs
+Data Center Watch,open export,27525,179 countries,mixed facility point/city centroid/listing,ODbL/DbCL,https://www.datacentr.net/,15927 geocoded and cross-source duplicates possible
+Epoch AI,open download,75,8 countries in snapshot,campus/project,CC BY 4.0,https://epoch.ai/data/ai-data-centers,Deep AI power and compute attributes but no lat/lon in main table
+Milan metropolitan data centers,open download,67,Metropolitan Milan,facility/project address,Copyright,https://zenodo.org/records/20377445,Coordinates require geocoding
+MIIT green data center list,open PDF,44,China,name-only,Reuse terms unspecified,https://www.ncsti.gov.cn/kjdt/tzgg/202201/P020220128613981363986.pdf,Not POI-ready
+FracTracker,open tracker,1608 in Data Center Watch,United States,operating/planned project,Check upstream license,https://www.fractracker.org/,Includes proposed cancelled suspended and expanding projects
+Data Center Map,commercial export,not downloaded,Global,facility/building,Internal use no redistribution,https://www.datacentermap.com/research/explorer/,Deep facility attributes
+TeleGeography,commercial subscription,not downloaded,Global,building-level,Licensed,https://www2.telegeography.com/data-center-research-service/,Sample or subscription required
+Baxtel,commercial request,not downloaded,Global,facility/project,Dataset request required,https://baxtel.com/map/,Public pages have MW area and project year
+Cloudscene,commercial/login,not downloaded,Global,facility/operator,Commercial terms,https://cloudscene.com/,No public bulk POI export found
+S&P Global 451,commercial subscription,not downloaded,Global,facility with deep attributes,Commercial subscription,https://www.marketplace.spglobal.com/en/datasets/451-research-data-center-knowledge-base-(238),Used by global microclimate research
+Ringmast4r Global Data Center Map,inspection only,18110 CSV and 6131 points,Global,mixed listing,All Rights Reserved,https://github.com/ringmast4r/Global-Data-Center-Map,Do not redistribute as a production dataset
+

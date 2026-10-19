@@ -1,0 +1,23 @@
+# Raw upstream data are intentionally excluded from this research repository.
+data/
+downloads/
+raw_data/
+papers/
+tmp/
+
+*.zip
+*.7z
+*.xlsx
+*.xls
+*.docx
+*.pdf
+*.geojson
+*.gpkg
+*.parquet
+*.db
+
+.env
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
