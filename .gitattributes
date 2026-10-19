@@ -1,0 +1,2 @@
+# 归档原文保持字节一致，以便复核 SHA-256。
+dc-flexibility-project/sources/local-documents/*.md -text

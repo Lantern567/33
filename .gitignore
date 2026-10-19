@@ -1,0 +1,39 @@
+# 当前工作区只同步仓库说明和数据中心研究目录。
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/AGENTS.md
+!/dc-flexibility-project/
+
+# 原始数据、中间数据和分析就绪数据保留在本地。
+/dc-flexibility-project/data/raw/*
+!/dc-flexibility-project/data/raw/.gitkeep
+/dc-flexibility-project/data/interim/*
+!/dc-flexibility-project/data/interim/.gitkeep
+/dc-flexibility-project/data/processed/*
+!/dc-flexibility-project/data/processed/.gitkeep
+
+# 临时文件和本地环境。
+**/.codex-temp/
+**/.codex-tmp/
+**/.venv/
+**/node_modules/
+**/__pycache__/
+**/.pytest_cache/
+**/.ipynb_checkpoints/
+**/.DS_Store
+**/Thumbs.db
+**/~$*
+**/*.tmp
+**/*.log
+
+# 凭据和连接配置。
+**/.env
+**/.env.*
+**/credentials.json
+**/frpc.toml
+**/*.pem
+**/*.key
+**/id_rsa*
+**/id_ed25519*

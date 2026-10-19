@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "imported_on": "2026-10-19",
+  "imported_on_timezone": "Asia/Shanghai",
+  "repository": "https://github.com/Tizzy-aiii/33",
+  "scope": "data-centre research documents",
+  "source_path_base": "original workspace root",
+  "preservation": "Original filenames and file bytes are preserved.",
+  "document_count": 8,
+  "documents": [
+    {
+      "source_relative_path": "方向一_24小时无碳电力匹配_研究方案_简版_20261017.md",
+      "repository_relative_path": "dc-flexibility-project/sources/local-documents/方向一_24小时无碳电力匹配_研究方案_简版_20261017.md",
+      "role": "current_main_proposal",
+      "bytes": 20744,
+      "source_last_write_time_utc": "2026-10-18T04:51:05Z",
+      "sha256": "02cc240ca500cbd250ab27a446fba3aea778e708acb999f5241181c2a59e2324"
+    },
+    {
+      "source_relative_path": "方向一_CFE约束与柔性收益_计算细节_20261018.md",
+      "repository_relative_path": "dc-flexibility-project/sources/local-documents/方向一_CFE约束与柔性收益_计算细节_20261018.md",
+      "role": "calculation_details",
+      "bytes": 31360,
+      "source_last_write_time_utc": "2026-10-18T04:51:05Z",
+      "sha256": "ef84f183ec6d1bd1732163a453525d35b3e36738358394911e8394df7ced5f65"
+    },
+    {
+      "source_relative_path": "方向三_数据中心无碳供能转型中的最优储能方案_研究方案_20261018.md",
+      "repository_relative_path": "dc-flexibility-project/sources/local-documents/方向三_数据中心无碳供能转型中的最优储能方案_研究方案_20261018.md",
+      "role": "storage_transition_proposal",
+      "bytes": 23720,
+      "source_last_write_time_utc": "2026-10-18T05:12:58Z",
+      "sha256": "017cd6ca5d086034a04388879791d1266b2b167fe76ae846f32414494d1f3a08"
+    },
+    {
+      "source_relative_path": "算电协同三个研究方向调研_20261015.md",
+      "repository_relative_path": "dc-flexibility-project/sources/local-documents/算电协同三个研究方向调研_20261015.md",
+      "role": "background_research",
+      "bytes": 32133,
+      "source_last_write_time_utc": "2026-10-14T21:16:04Z",
+      "sha256": "eeeeff6c220645c5bf6a4458f0827d6bceff1ec9cb27f42310c8f2e64cd2b4a8"
+    },
+    {
+      "source_relative_path": "方向一_基础设施协同与任务柔性_研究方案_20261017.md",
+      "repository_relative_path": "dc-flexibility-project/sources/local-documents/方向一_基础设施协同与任务柔性_研究方案_20261017.md",
+      "role": "earlier_proposal",
+      "bytes": 30499,
+      "source_last_write_time_utc": "2026-10-17T09:22:24Z",
+      "sha256": "09f1cc09590b808831d9ca2b529442194e14c79df0d0e6be9fe7c5e69d53f510"
+    },
+    {
+      "source_relative_path": "方向一_24小时无碳电力匹配_研究方案_20261017.md",
+      "repository_relative_path": "dc-flexibility-project/sources/local-documents/方向一_24小时无碳电力匹配_研究方案_20261017.md",
+      "role": "earlier_proposal",
+      "bytes": 35325,
+      "source_last_write_time_utc": "2026-10-17T09:52:47Z",
+      "sha256": "cacb0ef437c7ec2e6bd7688d35b5c5b752b0e61b2f8873142b832691a4afbc22"
+    },
+    {
+      "source_relative_path": "方向三_分类数据中心全生命周期储能选择_研究方案_20261017.md",
+      "repository_relative_path": "dc-flexibility-project/sources/local-documents/方向三_分类数据中心全生命周期储能选择_研究方案_20261017.md",
+      "role": "earlier_proposal",
+      "bytes": 23566,
+      "source_last_write_time_utc": "2026-10-17T15:53:59Z",
+      "sha256": "6538e4af5fbcdab256ea233014f63f45bfbda51c2e028e58cc49c53cb0f49e45"
+    },
+    {
+      "source_relative_path": "方向三_不同类型数据中心储能配置的经济环境权衡_研究方案_20261018.md",
+      "repository_relative_path": "dc-flexibility-project/sources/local-documents/方向三_不同类型数据中心储能配置的经济环境权衡_研究方案_20261018.md",
+      "role": "earlier_proposal",
+      "bytes": 20576,
+      "source_last_write_time_utc": "2026-10-17T16:33:48Z",
+      "sha256": "c78b78d5e8116ac594581602c426b1eb6b60090d3be65ba66e27a5d9abd197e6"
+    }
+  ]
+}
