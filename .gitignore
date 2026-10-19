@@ -6,7 +6,7 @@
 !/AGENTS.md
 !/dc-flexibility-project/
 
-# 原始数据、中间数据和分析就绪数据保留在本地。
+# 数据内容不提交 Git，归档与恢复方式见数据元数据说明。
 /dc-flexibility-project/data/raw/*
 !/dc-flexibility-project/data/raw/.gitkeep
 /dc-flexibility-project/data/interim/*
