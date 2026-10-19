@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0",
+  "project": "direction3_optimal_storage_cfe_transition",
+  "prepared_on": "2026-10-19",
+  "status": "setup_only_missing_verified_inputs",
+  "run_enabled": false,
+  "run_has_occurred": false,
+  "source_document": "../../sources/local-documents/方向三_数据中心无碳供能转型中的最优储能方案_研究方案_20261018.md",
+  "data_status": {
+    "proposal_received": true,
+    "operational_datasets_received": false,
+    "unknown_values": "null_not_zero",
+    "candidate_source_is_verified_data": false,
+    "shared_public_reference_files_received": true,
+    "shared_public_manifest": "../../data/metadata/public-seed/manifest.json",
+    "shared_public_binary_files_location": "local_package_not_git",
+    "site_calibrated_parameters_received": false,
+    "legacy_nc_ncc_metadata_available": true,
+    "legacy_nc_ncc_inventory": "../../data/metadata/existing-data-inventory.json",
+    "legacy_nc_ncc_archive_index": "../../data/metadata/baidu-netdisk-archive-20261019.json",
+    "legacy_nc_ncc_complete_packages_restored_this_step": false,
+    "legacy_nc_ncc_inputs_validated_for_direction3": false,
+    "legacy_nc_ncc_full_papers_verified": false,
+    "simulated_it_load_is_measured_facility_load": false
+  },
+  "study_boundary": {
+    "site_ids": [],
+    "region": null,
+    "base_year": null,
+    "time_zone": null,
+    "meter_boundary": "whole_facility_including_it_cooling_auxiliaries",
+    "same_service_across_comparisons": true,
+    "same_reliability_across_comparisons": true,
+    "same_hardware_update_path_within_future_scenario": true,
+    "new_task_migration_allowed": false,
+    "new_task_deferral_allowed": false,
+    "new_execution_control_allowed": false,
+    "existing_verified_flexibility_shared_by_all": true,
+    "retain_common_emergency_assets": true
+  },
+  "time_resolution": {
+    "acceptable_observed_load_intervals_minutes": [
+      15,
+      30
+    ],
+    "selected_observed_load_interval_minutes": null,
+    "minimum_continuous_observed_months": 12,
+    "additional_billing_lookback_required": true,
+    "billing_interval_minutes": null,
+    "billing_lookback_start": null,
+    "cfe_interval_minutes": 60,
+    "preserve_original_billing_resolution": true,
+    "automatic_missing_value_imputation_enabled": false
+  },
+  "comparisons": [
+    {
+      "id": "R0",
+      "name": "observed_actual_operation",
+      "source": "verified_observations_and_bills",
+      "replace_with_optimized_result": false
+    },
+    {
+      "id": "R1",
+      "name": "no_new_storage_economic_reference",
+      "new_storage_allowed": false,
+      "additional_cfe_requirement": false,
+      "retain_existing_contract_obligations": true,
+      "cross_target_reference": true
+    },
+    {
+      "id": "R2",
+      "name": "economic_optimum_without_additional_cfe_requirement",
+      "new_storage_allowed": true,
+      "additional_cfe_requirement": false,
+      "retain_existing_contract_obligations": true
+    },
+    {
+      "id": "R3",
+      "name": "economic_optimum_at_each_cfe_target",
+      "new_storage_allowed": true,
+      "additional_cfe_requirement": true,
+      "same_target_no_new_storage_reference_required": true,
+      "compute_cost_difference_when_reference_infeasible": false
+    }
+  ],
+  "supply_paths": {
+    "main": "S-JOINT",
+    "control": "S-FIXED",
+    "S-JOINT": {
+      "joint_supply_and_storage_optimization": true,
+      "candidate_supply_contract_ids": [],
+      "shared_candidate_set_across_technologies": true,
+      "procurement_limits_verified": false
+    },
+    "S-FIXED": {
+      "joint_supply_and_storage_optimization": false,
+      "fixed_supply_version": null,
+      "same_fixed_supply_across_technologies": true
+    },
+    "separate_supply_and_storage_contributions": true
+  },
+  "cfe_accounting": {
+    "primary_metric": "site_annual_load_weighted_hourly_matching",
+    "secondary_metric": "minimum_matching_in_each_load_hour",
+    "intermediate_target_fractions": [],
+    "strict_target_fraction": 1.0,
+    "strict_target_covers_all_positive_load_hours": true,
+    "strict_target_covers_storage_losses_and_auxiliaries": true,
+    "attribute_eligibility_and_deliverability_required": true,
+    "avoid_grid_and_dedicated_contract_double_allocation": true,
+    "track_total_soc_and_clean_attribute_soc": true,
+    "require_clean_soc_not_above_total_soc": true,
+    "attribute_withdrawal_method": null,
+    "initial_inventory_method": null,
+    "terminal_inventory_method": null,
+    "derive_completion_year_from_matching_fraction": false
+  },
+  "technology_candidates": [
+    {
+      "id": "no_new_storage",
+      "required_reference": true,
+      "retains_common_emergency_assets": true,
+      "asset_records_verified": false
+    },
+    {
+      "id": "lfp",
+      "admitted_to_site_model": false,
+      "engineering_evidence_status": "missing",
+      "parameter_values": null
+    },
+    {
+      "id": "vanadium_flow",
+      "admitted_to_site_model": false,
+      "engineering_evidence_status": "missing",
+      "parameter_values": null
+    },
+    {
+      "id": "electrolyzer_hydrogen_storage_fuel_cell",
+      "admitted_to_site_model": false,
+      "engineering_evidence_status": "missing",
+      "excluded_until_site_engineering_and_full_chain_evidence": true,
+      "parameter_values": null
+    }
+  ],
+  "lifecycle": {
+    "evaluation_years": null,
+    "currency": null,
+    "price_year": null,
+    "real_or_nominal": null,
+    "discount_rate": null,
+    "asset_vintage_records": [],
+    "replacement_method": null,
+    "salvage_value_method": null,
+    "recycling_allocation_method": null,
+    "avoid_duplicate_cashflow_and_depreciation": true,
+    "avoid_duplicate_net_bill_and_arbitrage_revenue": true,
+    "economic_salvage_is_not_negative_emissions": true,
+    "emission_factors": null,
+    "marginal_emission_or_dispatch_evidence_available": false,
+    "system_net_reduction_claim_enabled": false
+  },
+  "staged_transition": {
+    "stage_targets_and_dates": [],
+    "final_deadline": null,
+    "inherit_existing_assets_contracts_remaining_life": true,
+    "common_stage_targets_and_final_deadline_across_paths": true,
+    "common_information_conditions_across_implementable_paths": true,
+    "perfect_foresight_is_theoretical_reference_only": true,
+    "project_lead_times": null,
+    "annual_investment_and_implementation_limits": null,
+    "completion_year_estimation_enabled": false
+  },
+  "readiness_gates": {
+    "site_and_service_boundary_verified": false,
+    "observed_load_and_billing_lookback_verified": false,
+    "historical_bill_reproduction_passed": false,
+    "hourly_supply_attributes_and_contracts_verified": false,
+    "supply_paths_separately_configured": false,
+    "technology_engineering_and_lifecycle_inputs_verified": false,
+    "total_and_clean_soc_balance_specification_verified": false,
+    "lifecycle_and_stage_conventions_confirmed": false,
+    "data_permissions_and_input_versions_recorded": false
+  },
+  "blocking_items": [
+    "Select and verify the initial site, base year and service boundary",
+    "Obtain real 15/30-minute facility load for at least 12 months plus billing lookback",
+    "Obtain applicable contracts, billing rules and actual bills",
+    "Verify hourly CFE supply, attributes, deliverability and shared procurement limits",
+    "Obtain site-specific engineering, cost, performance, degradation and lifecycle emission evidence",
+    "Confirm dual SOC, losses, auxiliaries and terminal inventory accounting",
+    "Confirm evaluation period, price basis, replacement, salvage and stage continuity"
+  ]
+}

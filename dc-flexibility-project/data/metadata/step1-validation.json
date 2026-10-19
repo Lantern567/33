@@ -1,0 +1,20 @@
+{
+  "checked_at_utc": "2026-10-19T13:02:42.720874+00:00",
+  "scope": "Document links, JSON syntax, design configuration, empty templates and original document hashes; no model execution or research-result validation.",
+  "checks": {
+    "direction1_has_12_unique_scenarios": true,
+    "direction1_has_2_management_philosophies": true,
+    "direction1_run_disabled": true,
+    "direction3_run_disabled": true,
+    "direction3_no_new_task_controls": true,
+    "12_empty_input_tables": true,
+    "obsolete_active_csvs_removed": true,
+    "misnamed_manifest_removed": true,
+    "eight_original_documents_preserved": true
+  },
+  "current_relative_links_checked": 131,
+  "json_files_checked": 9,
+  "historical_source_local_links_excluded": true,
+  "errors": [],
+  "result": "passed"
+}
