@@ -1,0 +1,101 @@
+{
+  "version": "20261025-v4",
+  "report": "results\\compute-center-data-audit-20261022\\coupled-power-weather-20261025-v4\\CPU_GPU算力中心_IT散热与温湿度耦合负荷报告_20261025_v4.pdf",
+  "input_versions": [
+    {
+      "source": "SPECpower_ssj2008 HPE DL385 Gen10 Plus",
+      "url": "https://ftp.spec.org/power_ssj2008/results/res2021q1/power_ssj2008-20210221-01063.html",
+      "path": "C:\\Users\\Lantern567\\Documents\\ChatGPT\\ljt的文章\\dc-flexibility-project\\data\\raw\\coupled-power-weather-20261025-v4\\specpower-hpe-dl385-7763.html",
+      "sha256": "c01a3dd94981cac71a993b0ecf4cdff3ce2bee7c82fe811e007b3b1608194427",
+      "configuration": "2×AMD EPYC 7763，128物理核心，256 GB内存；测试设置关闭Core Performance Boost。"
+    },
+    {
+      "source": "Latif et al. 2024, arXiv:2412.08602v1 Table I",
+      "url": "https://arxiv.org/html/2412.08602v1",
+      "path": "C:\\Users\\Lantern567\\Documents\\ChatGPT\\ljt的文章\\dc-flexibility-project\\data\\raw\\coupled-power-weather-20261025-v4\\latif-2024-hgx-h100.html",
+      "sha256": "0090942a3e73135a1a551b4241d7610a768332dbf537c8fce6ac0437a30f24a5",
+      "configuration": "8×H100 80GB HGX节点，EPYC 9354宿主CPU，1.5 TB内存；节点PDU功率，RDHx另路供电。"
+    },
+    {
+      "source": "ESIF power",
+      "path": "D:\\onedrive\\01_科研与论文\\12_气候对data center影响\\data\\24x7_cfe\\raw\\observed_demand\\nlr_esif\\esif_power_metrics.parquet",
+      "sha256": "19cd12405dde9144b1a360e8c8418666c399a3d0d15a7f846880d71ab22f9dd4"
+    },
+    {
+      "source": "ESIF onsite outdoor weather",
+      "path": "D:\\onedrive\\01_科研与论文\\12_气候对data center影响\\data\\24x7_cfe\\raw\\observed_demand\\nlr_esif\\esif_weather.parquet",
+      "sha256": "97b424993fa77a15117fb2c4659a2c327fc83280f943fab47d9036260289a6a0"
+    },
+    {
+      "source": "五地点ERA5 2023—2025年小时温湿度",
+      "path": "C:\\Users\\Lantern567\\Documents\\ChatGPT\\ljt的文章\\dc-flexibility-project\\results\\compute-center-data-audit-20261022\\gpu397\\weather-trial\\known-gpu-locations-hourly-unit-it.parquet",
+      "sha256": "0792cc02bdc716453a6f5c84d0364c61be823834635d2e04f936448d339520a5"
+    },
+    {
+      "source": "cpu_fast",
+      "path": "C:\\Users\\Lantern567\\Documents\\ChatGPT\\ljt的文章\\dc-flexibility-project\\results\\compute-center-data-audit-20261022\\observed-trace-extrapolation-20261024-v3\\cpu_fast-observed-qualified-hours.parquet",
+      "sha256": "b4063810ae35131651a27ff465e2d86dfd56b2c441be91ef5cd4073cd4fdfecd"
+    },
+    {
+      "source": "cpu_fast",
+      "path": "C:\\Users\\Lantern567\\Documents\\ChatGPT\\ljt的文章\\dc-flexibility-project\\results\\compute-center-data-audit-20261022\\observed-trace-extrapolation-20261024-v3\\cpu_fast-replayed-8760-hours.parquet",
+      "sha256": "8b18f22fa57b21ca0ae702f6d04c42675ff415c87e867c4724f9325303cb3195"
+    },
+    {
+      "source": "cpu_rnd",
+      "path": "C:\\Users\\Lantern567\\Documents\\ChatGPT\\ljt的文章\\dc-flexibility-project\\results\\compute-center-data-audit-20261022\\observed-trace-extrapolation-20261024-v3\\cpu_rnd-observed-qualified-hours.parquet",
+      "sha256": "fc009dfe6932048f3a3020ec6d9b3aa77a18c1c4428daca57861f8288e078ff0"
+    },
+    {
+      "source": "cpu_rnd",
+      "path": "C:\\Users\\Lantern567\\Documents\\ChatGPT\\ljt的文章\\dc-flexibility-project\\results\\compute-center-data-audit-20261022\\observed-trace-extrapolation-20261024-v3\\cpu_rnd-replayed-8760-hours.parquet",
+      "sha256": "08d0be07ab639274cd6f9c2fb801d9f2453bcc1b3ec5c558e7826a3d4f7f4c94"
+    },
+    {
+      "source": "gpu",
+      "path": "C:\\Users\\Lantern567\\Documents\\ChatGPT\\ljt的文章\\dc-flexibility-project\\results\\compute-center-data-audit-20261022\\observed-trace-extrapolation-20261024-v3\\gpu-observed-qualified-hours.parquet",
+      "sha256": "50dadaef850d34766491b52aa1db836cf04cd800ac1c754cdb519cda0658e28b"
+    },
+    {
+      "source": "gpu",
+      "path": "C:\\Users\\Lantern567\\Documents\\ChatGPT\\ljt的文章\\dc-flexibility-project\\results\\compute-center-data-audit-20261022\\observed-trace-extrapolation-20261024-v3\\gpu-replayed-8760-hours.parquet",
+      "sha256": "40ea44339b380ce5e81116747127b12a1578c725183ddcff24da276be10d1936"
+    }
+  ],
+  "scope": "CPU/GPU、四档参考满载IT规模、五地点天气、2023—2025逐小时负荷",
+  "completed": [
+    "输入哈希一致",
+    "原始资源小时逐值溯源",
+    "节点数量按整机取整",
+    "实测功率点与插值映射",
+    "IT与散热近似关系",
+    "电功率分项守恒与PUE",
+    "累计资源和电量",
+    "月度与年度求和",
+    "天气与小时索引配对",
+    "同IT路径的地点对照",
+    "安装容量归一化的尺度一致性",
+    "闰年8784小时",
+    "留出集独立于拟合期",
+    "外推范围标记",
+    "价格空值"
+  ],
+  "cases": 180,
+  "validation_scope": "冷却关系只在ESIF时间留出集验证；CPU/GPU资源到瓦特的跨数据集映射尚无同机联合验证。",
+  "assumptions": [
+    "CPU使用率作为SPECpower相对基准负载的迁移代理；GPU申请份额作为HGX实测利用率—功率曲线的迁移代理。",
+    "未设置全年平均忙碌比例；使用既有逐小时原值重放；不同年份使用相同相对资源路径，闰年从最后源周延长24小时。",
+    "全部参考节点持续通电，逐时等强度映射；未识别真实任务装箱和单机负载分布。",
+    "同一ESIF冷却与配套系统响应分别用于CPU/GPU参考情境，未验证其供水温度和热接口与目标节点兼容。",
+    "气象来自五个地点的ERA5资料；这些地点用于气候情境，不代表真实场站的设备配置和耗电。",
+    "参考规模下固定与可变配套功率均按相同模块重复；未识别规模效率、冷却机组切换、设备降额或工程容量不足。"
+  ],
+  "unidentified_parameters": [
+    "申请份额对应的真实GPU利用率及H100吞吐等价",
+    "外部共享交换网络和存储功率",
+    "目标冷却设备COP、供水温度及容量",
+    "绝对设备与设施报价"
+  ],
+  "prior_report_retained": "observed-trace-extrapolation-20261024-v3",
+  "calibration_rmse_kw": 17.753530948921636
+}
