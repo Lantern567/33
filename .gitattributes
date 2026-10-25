@@ -8,3 +8,15 @@ dc-flexibility-project/data/metadata/baidu-netdisk-archive-*.json -text
 dc-flexibility-project/results/compute-center-data-audit-20261022/coupled-power-weather-20261025-v4/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 dc-flexibility-project/results/compute-center-data-audit-20261022/coupled-power-weather-20261025-v4/*.pdf binary
 dc-flexibility-project/results/compute-center-data-audit-20261022/coupled-power-weather-20261025-v4/*.png binary
+
+# 通用负荷模块保留参数原始字节和代码 LF 换行，便于复核指纹。
+dc-flexibility-project/analysis/compute_load/*.py text eol=lf
+dc-flexibility-project/analysis/compute_load/assets/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+dc-flexibility-project/analysis/build_compute_profile_library.py text eol=lf
+dc-flexibility-project/analysis/global_grid_compute_load.py text eol=lf
+dc-flexibility-project/analysis/global_grid_flex_solver.py text eol=lf
+dc-flexibility-project/analysis/prepare_compute_solver_input.py text eol=lf
+dc-flexibility-project/analysis/verify_compute_load_module.py text eol=lf
+dc-flexibility-project/analysis/validate_global_grid_flex_solver.py text eol=lf
+dc-flexibility-project/docs/compute-load-module.md text eol=lf
+dc-flexibility-project/data/metadata/compute-load-module-20261025-v1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

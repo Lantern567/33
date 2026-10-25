@@ -1,0 +1,7 @@
+﻿measurement,load_fraction,node_power_w
+Idle Node,0.0,1860.0
+Resnet-512,0.36,4680.0
+Resnet-4096,0.77,6260.0
+Llama2-13b,0.93,7920.0
+GPU Burn (no CPU),1.0,7970.0
+GPU Burn (++CPU),1.0,8430.0

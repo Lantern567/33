@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "real_weather_hours": 168,
+  "checks": [
+    {
+      "check": "flexible_fraction=0与固定任务一致",
+      "status": "passed",
+      "annual_cost_difference_usd": 0.0
+    },
+    {
+      "check": "deadline_h=0与固定任务一致",
+      "status": "passed",
+      "annual_cost_difference_usd": 0.0
+    },
+    {
+      "check": "满载r=1无额外移峰收益",
+      "status": "passed",
+      "annual_cost_difference_usd": 0.0
+    },
+    {
+      "check": "满载r=1逐小时工作量固定为1",
+      "status": "passed"
+    },
+    {
+      "check": "零发电容量严格不可行",
+      "status": "passed"
+    },
+    {
+      "check": "CS独立复算工作量、电力、循环库存、充放电及逐批期限",
+      "status": "passed",
+      "edf_maximum_completion_lag_h": 0
+    },
+    {
+      "check": "CSD独立复算工作量、电力、循环库存、充放电及逐批期限",
+      "status": "passed",
+      "edf_maximum_completion_lag_h": 0
+    }
+  ],
+  "validation_scope": "真实天气小段上的参考模块技术情景；不形成全球或年度收益结论",
+  "mock_or_generated_weather": false,
+  "hourly_input_path": "C:\\Users\\Lantern567\\Documents\\ChatGPT\\ljt的文章\\.codex-temp\\compute-load-module-20261025\\supply-168h.parquet",
+  "hourly_input_sha256": "f3911c5dfe5e8ee4a8225212e6e33fc0a84f2ad2ce0dcd332ddf1fc166c5acf7",
+  "config_input_path": "C:\\Users\\Lantern567\\Documents\\ChatGPT\\ljt的文章\\.codex-temp\\compute-load-module-20261025\\validation-config.json",
+  "config_input_sha256": "8691b6a2630c3691f3beb10fea4e05d4920a083fff06a22354b5c2179e3c7b00",
+  "solver_script_sha256": "32c8c4be61451004156e884d1e99a2f78f69902075747694af5ef82e5fb35e26"
+}
