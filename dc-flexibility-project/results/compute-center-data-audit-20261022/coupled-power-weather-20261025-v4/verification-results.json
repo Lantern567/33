@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "version": "20261025-v4",
+  "hourly_cases": 180,
+  "main_cases": 120,
+  "cpu_sample_sensitivity_cases": 60,
+  "checked_hourly_rows": 1578240,
+  "checked_resource_source_hours": 78912,
+  "monthly_rows": 2160,
+  "pdf_pages": 12,
+  "chapter1_text_and_pixels_identical": true,
+  "pdf_visual_review": "全部12页与7张源图已检查，修改公式和坐标轴的页面已复查",
+  "checks": [
+    "输入哈希一致",
+    "原始资源小时逐值溯源",
+    "节点数量按整机取整",
+    "实测功率点与插值映射",
+    "IT与散热近似关系",
+    "电功率分项守恒与PUE",
+    "累计资源和电量",
+    "月度与年度求和",
+    "天气与小时索引配对",
+    "同IT路径的地点对照",
+    "安装容量归一化的尺度一致性",
+    "闰年8784小时",
+    "留出集独立于拟合期",
+    "外推范围标记",
+    "价格空值"
+  ],
+  "scientific_scope": "冷却关系只在ESIF时间留出集验证；CPU/GPU资源到瓦特的跨数据集映射尚无同机联合验证。",
+  "pdf_sha256": "5f16a50eb1a4586f85ac64a380983e473786ff98a0308b561fb54893c3bcf644",
+  "software_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "scipy": "1.13.1",
+    "PsychroLib": "2.5.0",
+    "reportlab": "4.4.5",
+    "PyMuPDF": "1.26.5"
+  }
+}

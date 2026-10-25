@@ -3,3 +3,8 @@ dc-flexibility-project/sources/local-documents/*.md -text
 
 # 云端归档清单保持字节一致，便于跨系统复核 SHA-256。
 dc-flexibility-project/data/metadata/baidu-netdisk-archive-*.json -text
+
+# 负荷工作包保持原始字节，跨系统核验使用同一 SHA-256。
+dc-flexibility-project/results/compute-center-data-audit-20261022/coupled-power-weather-20261025-v4/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+dc-flexibility-project/results/compute-center-data-audit-20261022/coupled-power-weather-20261025-v4/*.pdf binary
+dc-flexibility-project/results/compute-center-data-audit-20261022/coupled-power-weather-20261025-v4/*.png binary
