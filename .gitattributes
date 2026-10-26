@@ -29,3 +29,9 @@ dc-flexibility-project/analysis/audit_lisa_tasks.py text eol=lf
 dc-flexibility-project/analysis/verify_task_trace_inputs.py text eol=lf
 dc-flexibility-project/docs/task-trace-flexibility.md text eol=lf
 dc-flexibility-project/data/metadata/task-trace-audit-20261026/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# 任务负荷报告的图件、正文和汇总保留生成时的校验值。
+dc-flexibility-project/analysis/build_task_driven_load_report.py text eol=lf
+dc-flexibility-project/results/task-driven-load-report-20261026/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+dc-flexibility-project/results/task-driven-load-report-20261026/*.pdf binary
+dc-flexibility-project/results/task-driven-load-report-20261026/*.png binary
