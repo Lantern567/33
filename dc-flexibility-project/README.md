@@ -14,7 +14,7 @@
 
 [任务记录粒度与柔性约束](docs/task-trace-flexibility.md)提供秒级 CPU/GPU 作业、ASI 小时类型与优先级数据的读取和资源累计接口，并说明任务类别、服务期限和抢占权限的证据范围。
 
-[任务需求与柔性约束负荷报告](results/task-driven-load-report-20261026/README.md)整理 Lisa、Acme Kalos 和 ASI 的实测任务特征，包含 12 页 PDF、六组图及四档 IT 规模的 24 小时功率示例，并说明年度外推和任务调度所需的条件。
+[需求模式与柔性约束负荷报告 v2](results/task-driven-load-report-20261026-v2/README.md)分别定义科研超算、大模型开发和生产 AI 服务需求，以及 CPU/GPU/混合设备构成。16 页 PDF 包含来源波动、六组图、四档规模的功率示例和 ASI 柔性文献结果；[初始报告](results/task-driven-load-report-20261026/README.md)保留。
 
 ## 从这里开始
 
