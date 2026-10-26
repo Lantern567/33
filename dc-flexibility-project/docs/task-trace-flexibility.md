@@ -4,6 +4,8 @@
 
 [需求模式与柔性约束负荷报告 v2](../results/task-driven-load-report-20261026-v2/README.md)分别说明科研超算、大模型开发、生产 AI 服务需求与 CPU/GPU/混合设备构成，并提供来源波动、功率示例和柔性文献对照；[初始报告](../results/task-driven-load-report-20261026/README.md)保留。
 
+[情境设计与负荷计算说明](../results/scenario-load-methods-20261026/README.md)按三项基础维度定义 36 组设计，逐步说明气象、资源与功率计算；柔性权限与求解变量独立成章。
+
 ## 数据与适用时间尺度
 
 | 数据 | 原始粒度及覆盖 | 可计算内容 | 柔性约束 |
