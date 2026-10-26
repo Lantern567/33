@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "grid_id": "g05_r100_c592",
+  "native_flat_index": 289905,
+  "years": [
+    2023,
+    2024,
+    2025
+  ],
+  "cases": 24,
+  "hourly_rows": 210432,
+  "source_file_sha256": "3154937c8e60ac9b18bf1d5015c6b3e98346073fecbc13ccdb8b11c472a1b635",
+  "source_dew_points_retained": true,
+  "unique_dew_point_roundoff_hours": [
+    "2024-09-10 17:00:00+00:00",
+    "2025-10-11 16:00:00+00:00"
+  ],
+  "checks": [
+    "UTC日历与原生天气逐小时连接",
+    "Parquet回读及SHA",
+    "源露点原值保留",
+    "分项电功率守恒",
+    "年度电量一致"
+  ]
+}

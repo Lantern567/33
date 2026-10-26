@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "regression_cases": 120,
+  "regression_hourly_rows": 1052160,
+  "maximum_absolute_regression_error": 2.9103830456733704e-11,
+  "real_weather_source": "既有ERA5五地点与全球求解器ERA5实测天气输入",
+  "batch_cases": 8,
+  "idempotent_resume": true,
+  "invalid_input_checks": 14,
+  "fixed_load_solver_real_168h": {
+    "C0": "infeasible",
+    "CS": "optimal"
+  },
+  "flexible_schedule_misuse_rejected": true,
+  "cost_scope": "168h求解仅验证接口与守恒；沿用既有明确标记的技术价格情景，不作为全年经济结论",
+  "model": {
+    "version": "compute-load-20261025-v1",
+    "calibration_version": "20261025-v4",
+    "model_source_sha256": "9b41b9569ccbd7b5276c3a838f2b02eab3c09ce16dbd1f36c1860bc3c7c137ac",
+    "dew_point_roundoff_tolerance_c": 0.01,
+    "software": {
+      "numpy": "2.2.6",
+      "pandas": "2.2.3",
+      "numba": "0.61.2"
+    },
+    "assets_sha256": {
+      "cooling-calibration.json": "9ca6712fa38dd451b5c8bda472ca0a618f27a01fb0362bfcb44f661a2af7443b",
+      "cpu-measured-power-anchors.csv": "89b2dbb240e62e75968fb9677e63552038ca3b08b4c634fe4904dc42708f0c0f",
+      "gpu-measured-power-anchors.csv": "4edf12f481b85005505cb71a7fcae1faa25388effdd7f0f068e396bf34ccd15b"
+    },
+    "power_scope": "实测整机功率；CPU/GPU 资源到利用率为跨数据集代理",
+    "cooling_scope": "ESIF同时间IT、室外温湿度和分项电功率拟合的非负分段线性响应；属于原冷却配置的转移情境，未标定COP、供水温度或目标硬件改造。"
+  }
+}
