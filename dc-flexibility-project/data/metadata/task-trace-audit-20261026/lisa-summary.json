@@ -1,0 +1,92 @@
+{
+  "source": "SURF Lisa 官方 Zenodo 13685426 v3",
+  "source_url": "https://zenodo.org/records/13685426",
+  "job_rows": 1596963,
+  "unique_job_ids": 1596963,
+  "first_submit_source_time": "2021-12-25 16:55:07",
+  "last_end_source_time": "2022-11-01 13:59:18",
+  "job_time_unit": "秒级时间戳",
+  "source_timezone": "Parquet 时间未携带时区，连接全球 UTC 气象前须向来源核实",
+  "monitoring": {
+    "published_sampling_seconds": 30,
+    "evidence": "官方数据说明及数据整合代码；本次未下载全套监测"
+  },
+  "hardware_metadata_rows": 343,
+  "hardware_metadata_cpu_cores": 5952,
+  "hardware_metadata_gpus": 210,
+  "groups": {
+    "cpu_partition": {
+      "job_count": 1395625,
+      "runtime_seconds_quantiles": {
+        "0.25": 2.0,
+        "0.5": 25.0,
+        "0.75": 313.0,
+        "0.9": 3280.0,
+        "0.99": 49459.52000000002
+      },
+      "runtime_under_60s_fraction": 0.584609762651142,
+      "runtime_under_3600s_fraction": 0.9062233766233766,
+      "allocated_core_hours": 26040211.010277778,
+      "source_partitions": {
+        "normal": 954022,
+        "shared": 428280,
+        "fat_soil_shared": 4306,
+        "sw": 3386,
+        "shared_jupyter": 2512,
+        "short": 1446,
+        "fat": 1391,
+        "shared_52c_384g": 282
+      }
+    },
+    "gpu_partition": {
+      "job_count": 201338,
+      "runtime_seconds_quantiles": {
+        "0.25": 18.0,
+        "0.5": 274.0,
+        "0.75": 3370.0,
+        "0.9": 18017.300000000017,
+        "0.99": 172820.0
+      },
+      "runtime_under_60s_fraction": 0.3773058240371912,
+      "runtime_under_3600s_fraction": 0.7565337889519117,
+      "allocated_core_hours": 3844783.8558333335,
+      "source_partitions": {
+        "gpu_shared": 82670,
+        "gpu_titanrtx_shared": 56124,
+        "gpu_shared_course": 23307,
+        "gpu_titanrtx": 14643,
+        "gpu": 9342,
+        "gpu_short": 5571,
+        "gpu_titanrtx_shared_course": 4347,
+        "gpu_titanrtx_short": 3595,
+        "gpu_shared_jupyter": 1739
+      }
+    }
+  },
+  "constraint_unknown_rows": 1596963,
+  "classification_scope": "按来源分区名称区分 CPU 与 GPU 分区，未从 GPU 分区推定任务使用卡数或训练/推理类型",
+  "inputs_sha256": {
+    "jobs_zip": "639c74c1785667d3a3e564fd35c28b79593f0d52bab41dca89cc60c9e0704247",
+    "hardware": "08ad762ee71ab03dbbbb0e7d945968af66ff07e7eee00fa827ae97c9ae8884b6"
+  },
+  "resource_time_reference": "保留源文件无时区时间和相对小时，不直接赋予 UTC 时区",
+  "input_md5": {
+    "slurm_table_cleaned.zip": "ae697e29d3d4ce10c4b1ab670b82d06c",
+    "node_hardware_info.parquet": "9c004d3ac06a97f6de1e0917640a9464"
+  },
+  "validation": {
+    "official_md5": "passed",
+    "job_id_uniqueness": "passed",
+    "nonnegative_run_and_wait": "passed",
+    "core_hour_conservation": "passed",
+    "five_minute_to_hourly": "passed"
+  },
+  "analysis_code_sha256": {
+    "audit_lisa_tasks.py": "24d290e49edc81edab74a5f2b289c554059fff9758ff12a8133fb4b21ccda14f",
+    "task_trace_inputs.py": "5c88a4a22be0372be4c563bf711a031917d0aec67100f3f978392f3fcea3d0f6"
+  },
+  "software": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3"
+  }
+}

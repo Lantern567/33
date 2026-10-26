@@ -20,3 +20,12 @@ dc-flexibility-project/analysis/verify_compute_load_module.py text eol=lf
 dc-flexibility-project/analysis/validate_global_grid_flex_solver.py text eol=lf
 dc-flexibility-project/docs/compute-load-module.md text eol=lf
 dc-flexibility-project/data/metadata/compute-load-module-20261025-v1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# 任务来源接口与验证记录保留可复核的代码和输入指纹。
+dc-flexibility-project/analysis/task_trace_inputs.py text eol=lf
+dc-flexibility-project/analysis/fetch_task_trace_samples.py text eol=lf
+dc-flexibility-project/analysis/audit_task_trace_sources.py text eol=lf
+dc-flexibility-project/analysis/audit_lisa_tasks.py text eol=lf
+dc-flexibility-project/analysis/verify_task_trace_inputs.py text eol=lf
+dc-flexibility-project/docs/task-trace-flexibility.md text eol=lf
+dc-flexibility-project/data/metadata/task-trace-audit-20261026/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

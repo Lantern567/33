@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "independent_interval_bin_checks": 48,
+  "invalid_input_checks": 5,
+  "permission_inference": "缺失权限保持未知",
+  "input": "官方 AcmeTrace Kalos 作业与 ASI 真实小时分片，无模拟任务"
+}

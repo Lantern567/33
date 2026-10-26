@@ -1,0 +1,216 @@
+{
+  "source": "AcmeTrace Kalos 原始 CSV 与 Alibaba GPU 2026 小时分片",
+  "acme": {
+    "rows": 62413,
+    "first_submit_utc": "2023-05-17 11:00:58+00:00",
+    "last_end_utc": "2023-08-16 15:17:42+00:00",
+    "granularity": {
+      "cpu": {
+        "rows": 42506,
+        "valid_execution_intervals": 42506,
+        "missing_or_invalid_intervals": 0,
+        "zero_runtime_intervals": 1,
+        "runtime_seconds_quantiles": {
+          "0.25": 5.0,
+          "0.5": 8.0,
+          "0.75": 16.0,
+          "0.9": 27.0,
+          "0.99": 119.0
+        },
+        "runtime_under_60s_fraction": 0.9730391003623018,
+        "runtime_under_300s_fraction": 0.9970357126052792,
+        "runtime_under_3600s_fraction": 0.9997882651860914,
+        "type_counts": {
+          "CPU": 42506
+        },
+        "constraint_unknown_rows": 42506
+      },
+      "gpu": {
+        "rows": 19907,
+        "valid_execution_intervals": 19904,
+        "missing_or_invalid_intervals": 3,
+        "zero_runtime_intervals": 2,
+        "runtime_seconds_quantiles": {
+          "0.25": 19.0,
+          "0.5": 48.0,
+          "0.75": 217.0,
+          "0.9": 953.0,
+          "0.99": 9865.230000000069
+        },
+        "runtime_under_60s_fraction": 0.5485831993569131,
+        "runtime_under_300s_fraction": 0.808229501607717,
+        "runtime_under_3600s_fraction": 0.9818127009646302,
+        "type_counts": {
+          "Eval": 18471,
+          "Pretrain": 641,
+          "Debug": 537,
+          "Other": 250,
+          "SFT": 8
+        },
+        "constraint_unknown_rows": 19907
+      }
+    },
+    "reported_duration_matches_execution_interval": 1,
+    "reported_duration_matches_turnaround": 62410,
+    "resource_integrals": {
+      "cpu": {
+        "integrated_resource_hours": 7858.092777777778,
+        "maximum_concurrent_allocated_units": 15360.0,
+        "mean_allocated_units": 3.589809400538044,
+        "five_minute_to_hourly_conservation": "passed"
+      },
+      "gpu": {
+        "integrated_resource_hours": 1442404.5538888888,
+        "maximum_concurrent_allocated_units": 1536.0,
+        "mean_allocated_units": 658.9330990812649,
+        "five_minute_to_hourly_conservation": "passed"
+      }
+    }
+  },
+  "asi": {
+    "native_grain_seconds": 3600,
+    "available_days": 185,
+    "available_hours": 4440,
+    "sample_hours": 24,
+    "quality_totals": {
+      "all_pod_observations": 36264315,
+      "gpu_pod_observations": 2816548,
+      "excluded_zero_gpu_observations": 33447767,
+      "unknown_type_gpu_observations": 12054,
+      "missing_sm_util_gpu_observations": 766569,
+      "sm_util_above_100_gpu_observations": 64374,
+      "published_deadline_observations": 0,
+      "published_preemption_permission_observations": 0
+    },
+    "by_type": {
+      "dev": {
+        "pod_observations": 39956,
+        "used_gpu_hours": 115298.62238888889
+      },
+      "offline_inference": {
+        "pod_observations": 938370,
+        "used_gpu_hours": 692977.7241666666
+      },
+      "online_inference": {
+        "pod_observations": 1609573,
+        "used_gpu_hours": 1534784.9971111112
+      },
+      "other": {
+        "pod_observations": 5444,
+        "used_gpu_hours": 43738.23333333334
+      },
+      "training": {
+        "pod_observations": 211151,
+        "used_gpu_hours": 702571.4527777778
+      },
+      "unknown": {
+        "pod_observations": 12054,
+        "used_gpu_hours": 9365.626833333334
+      }
+    },
+    "request_fraction_range": [
+      1.0463245170746647,
+      1.1662458343360096
+    ]
+  },
+  "flexibility": {
+    "published_deadline_rows": 0,
+    "published_preemption_permission_rows": 0,
+    "classification": "所有业务期限与抢占权限保留未知；类型与优先级用于候选筛选",
+    "low_priority": "LP 保留来源的低优先级/spot 含义，不转换成允许延迟小时数"
+  },
+  "validation": {
+    "resource_hour_conservation": "passed",
+    "five_minute_to_hourly": "passed"
+  },
+  "power_interface": {
+    "cases": [
+      {
+        "hardware": "cpu",
+        "reference_it_mw": 1,
+        "hours": 24,
+        "facility_mwh": 6.579426319821632
+      },
+      {
+        "hardware": "cpu",
+        "reference_it_mw": 10,
+        "hours": 24,
+        "facility_mwh": 65.81222995496077
+      },
+      {
+        "hardware": "cpu",
+        "reference_it_mw": 100,
+        "hours": 24,
+        "facility_mwh": 658.1222995496078
+      },
+      {
+        "hardware": "cpu",
+        "reference_it_mw": 500,
+        "hours": 24,
+        "facility_mwh": 3290.611497748039
+      },
+      {
+        "hardware": "gpu",
+        "reference_it_mw": 1,
+        "hours": 24,
+        "facility_mwh": 23.968784106399102
+      },
+      {
+        "hardware": "gpu",
+        "reference_it_mw": 10,
+        "hours": 24,
+        "facility_mwh": 240.9065927982147
+      },
+      {
+        "hardware": "gpu",
+        "reference_it_mw": 100,
+        "hours": 24,
+        "facility_mwh": 2409.4721785602214
+      },
+      {
+        "hardware": "gpu",
+        "reference_it_mw": 500,
+        "hours": 24,
+        "facility_mwh": 12047.564018090146
+      }
+    ],
+    "weather_sha256": "e08bf7817b6973f20b9d65b20da5921cec887215add1b95041a9d3620a9a9c31",
+    "cpu_source_window_start_utc": "2023-08-15 00:00:00+00:00",
+    "cpu_reference_cores": 15360.0,
+    "gpu_source_relative_start_hour": 2616,
+    "scope": "固定资源路径的功率接口验证；跨数据集功率代理；资源相对小时映射到所选真实天气，非原设施实测功率",
+    "flexible_scheduling": "未赋予缺失的业务权限"
+  },
+  "inputs_sha256": {
+    "trace_kalos.csv": "7c5a7845da1d66448fa668342e4ecb622fd9a005118080660ec3ad2788d4c9bf",
+    "download-manifest.json": "43548cf0115e73973d9ffa5f04275b76311888e4e0e11e4a4df3c7ca9343ba2e"
+  },
+  "analysis_code_sha256": {
+    "audit_task_trace_sources.py": "14b255c4f3f38e7a1abdb6110dc2184fb3353a7a6add2d54e72b02c49c1b302b",
+    "task_trace_inputs.py": "5c88a4a22be0372be4c563bf711a031917d0aec67100f3f978392f3fcea3d0f6"
+  },
+  "software": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3"
+  },
+  "outputs_sha256": {
+    "acme-5min-resource-demand.parquet": "67fb1c23cc772ebecaa3c469355e01124acf2b6f010cb218e6838eb62e00551d",
+    "acme-hourly-resource-demand.parquet": "f72468bfa5fad887a2d1e793a1cebbe9d2d3f13c606eeb66fe12f8f530fd5ba7",
+    "acme-tasks.parquet": "d78680201a78e98f8f199a6956555365480f2191c1d1bd0dce411c7d05ff593e",
+    "asi-hourly-resource-demand.csv": "48bc65b2067934d3793c41e257ff3354431230a33d071f1ad64de6c139149013",
+    "asi-hourly-type-priority.csv": "81e63bc2a769cb32e9be6ee2f7bc9bec6e50c74f293d265a3132f4e29f42b2f0",
+    "asi-quality-by-hour.csv": "371041bd2944c1a83d8d64aeda1de3b8baa350f526ab6b75f71394f5d0026f00",
+    "lisa/lisa-5min-core-demand.parquet": "943e7b764605710701404ae531a392b6d3980f8afa8d40b5cc7918269fa86720",
+    "lisa/lisa-hourly-core-demand.parquet": "55c49284c5d6a4ba39a67cb7ffc948804d8d33d6a056a185bf5afb2fc89f48ef",
+    "lisa/lisa-summary.json": "e5608db3b6d2cc766896a5c9052815faeac5e766313e366663f5f9cd1d9417a7",
+    "lisa/lisa-tasks.parquet": "143e1e0ed9dcc92a8bc188f77c5c362a2873d403c9ac344f1f203dda9dcc2e72",
+    "power-interface/cpu/100MW.parquet": "2af63f25ae27623becad3b1468b8c8265362abaee43a18b8012e6405c91cae3c",
+    "power-interface/cpu/10MW.parquet": "5caaa764ed8ea2d3f9ce794206c70ccb4928ed242915663fceccdb0c7ffc9cb4",
+    "power-interface/cpu/1MW.parquet": "ab2089693d1dcd5ab9464bec9cab8a0f6b86e5993314d6e84c227b2317025139",
+    "power-interface/cpu/500MW.parquet": "d394918b11951efb6328ec6625b989cd408db2766a55a6425c5e511dd9c58c8c",
+    "power-interface/gpu/100MW.parquet": "401755a1ab1dc02f99ac21691770fef911c251298063cf64ddcffd84f75f856f",
+    "power-interface/gpu/10MW.parquet": "843a612604ebb7c400ca3e1a0fa76fa8efd3c66199c907f9cd501f69328f1e19",
+    "power-interface/gpu/1MW.parquet": "e0be33c4dde50a9097019e7afe395f7a81e1a20309c5dcda45b972077ed3c8ac",
+    "power-interface/gpu/500MW.parquet": "1cfb83744e8574502b7d5f77787ce6b3c9f0935c0fcd636bae071a272a48c48e"
+  }
+}
